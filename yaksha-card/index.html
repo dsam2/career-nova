@@ -1,0 +1,1258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yaksha Rituals - Business Card Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Rozha+One&family=Yatra+One&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --card-bg: #8c1e22;
+      --card-accent: #a32429;
+      --card-line: rgba(255, 255, 255, 0.28);
+      --card-line-light: rgba(255, 255, 255, 0.15);
+      --card-text: #ffffff;
+      --card-subtext: rgba(255, 255, 255, 0.85);
+      --card-faint: rgba(255, 255, 255, 0.12);
+      --card-watermark: rgba(255, 255, 255, 0.08);
+      --bg-surface: #f4efe9;
+      --panel-bg: #1e1e24;
+      --panel-text: #e2e8f0;
+      --accent-gold: #d4af37;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--bg-surface);
+      color: #2b2b2b;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Top Navigation Bar */
+    header {
+      background: #18181b;
+      color: white;
+      padding: 14px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    .brand-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-badge {
+      background: #8c1e22;
+      color: white;
+      font-weight: 700;
+      font-size: 13px;
+      padding: 4px 10px;
+      border-radius: 6px;
+      letter-spacing: 0.5px;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 18px;
+      border-radius: 8px;
+      font-size: 13.5px;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+      transition: all 0.2s ease;
+      font-family: inherit;
+    }
+
+    .btn-primary {
+      background: #8c1e22;
+      color: white;
+    }
+    .btn-primary:hover {
+      background: #a32429;
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      background: rgba(255,255,255,0.1);
+      color: white;
+      border: 1px solid rgba(255,255,255,0.15);
+    }
+    .btn-secondary:hover {
+      background: rgba(255,255,255,0.18);
+    }
+
+    .btn-gold {
+      background: #e6b800;
+      color: #111;
+      font-weight: 700;
+    }
+    .btn-gold:hover {
+      background: #ffd014;
+    }
+
+    /* App Workspace */
+    .workspace {
+      display: flex;
+      flex: 1;
+      overflow: hidden;
+      min-height: calc(100vh - 65px);
+    }
+
+    /* Sidebar Controls */
+    .sidebar {
+      width: 360px;
+      background: #ffffff;
+      border-right: 1px solid #e2e8f0;
+      padding: 24px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      box-shadow: 2px 0 10px rgba(0,0,0,0.02);
+    }
+
+    .sidebar-section-title {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 700;
+      color: #64748b;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .control-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 14px;
+    }
+
+    .control-group label {
+      font-size: 12.5px;
+      font-weight: 600;
+      color: #334155;
+    }
+
+    .control-group input, .control-group select, .control-group textarea {
+      padding: 10px 12px;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      font-size: 13.5px;
+      font-family: inherit;
+      color: #1e293b;
+      outline: none;
+      transition: border 0.15s;
+    }
+
+    .control-group input:focus, .control-group select:focus, .control-group textarea:focus {
+      border-color: #8c1e22;
+      box-shadow: 0 0 0 2px rgba(140, 30, 34, 0.15);
+    }
+
+    .color-swatches {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 8px;
+      margin-top: 4px;
+    }
+
+    .swatch {
+      aspect-ratio: 1;
+      border-radius: 8px;
+      cursor: pointer;
+      border: 2px solid transparent;
+      box-shadow: inset 0 0 0 1px rgba(0,0,0,0.1);
+      position: relative;
+      transition: transform 0.15s;
+    }
+    .swatch:hover {
+      transform: scale(1.08);
+    }
+    .swatch.active {
+      border-color: #18181b;
+      box-shadow: 0 0 0 2px rgba(0,0,0,0.2);
+    }
+
+    .help-box {
+      background: #f8fafc;
+      border: 1px dashed #cbd5e1;
+      border-radius: 8px;
+      padding: 12px 14px;
+      font-size: 12px;
+      color: #475569;
+      line-height: 1.5;
+    }
+
+    /* Preview Canvas Area */
+    .preview-canvas {
+      flex: 1;
+      background: #eee8e0;
+      background-image: 
+        radial-gradient(circle at 50% 50%, rgba(255,255,255,0.7) 0%, rgba(220,212,200,0.4) 100%),
+        repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(0,0,0,0.02) 40px),
+        repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(0,0,0,0.02) 40px);
+      padding: 40px 20px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .canvas-toolbar {
+      display: flex;
+      gap: 12px;
+      background: #ffffff;
+      padding: 8px 16px;
+      border-radius: 40px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .canvas-toggle-btn {
+      padding: 6px 14px;
+      border-radius: 20px;
+      border: none;
+      background: transparent;
+      color: #64748b;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+    .canvas-toggle-btn.active {
+      background: #18181b;
+      color: white;
+    }
+
+    .cards-stage {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 60px;
+      padding: 20px 0;
+      perspective: 1000px;
+    }
+
+    .card-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .card-label {
+      font-size: 12.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #78716c;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* THE CARD (STAMP EFFECT) */
+    /* Exact Postage Stamp Scalloped Edge */
+    .stamp-card {
+      width: 320px;
+      height: 540px;
+      background-color: var(--card-bg);
+      position: relative;
+      border-radius: 18px;
+      color: var(--card-text);
+      box-shadow: 
+        0 20px 45px -10px rgba(70, 15, 18, 0.45),
+        0 8px 16px -6px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+      cursor: text;
+      transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+      /* Native stamp scalloped mask */
+      --dot-size: 6px;
+      --dot-spacing: 16px;
+      mask-image: 
+        radial-gradient(circle at 0 calc(var(--dot-spacing) * var(--n, 1)), transparent calc(var(--dot-size) / 2), black calc(var(--dot-size) / 2 + 0.5px)),
+        radial-gradient(circle at 100% calc(var(--dot-spacing) * var(--n, 1)), transparent calc(var(--dot-size) / 2), black calc(var(--dot-size) / 2 + 0.5px));
+      -webkit-mask-image: radial-gradient(circle at var(--dot-size) 0, transparent 0, transparent 4px, black 4.5px);
+    }
+
+    /* Reliable SVG Perforation Mask Technique */
+    .card-container {
+      position: relative;
+      width: 330px;
+      height: 550px;
+      filter: drop-shadow(0 22px 35px rgba(90, 18, 22, 0.35)) drop-shadow(0 4px 10px rgba(0,0,0,0.15));
+      transition: transform 0.25s ease;
+    }
+    .card-container:hover {
+      transform: translateY(-6px) scale(1.01);
+    }
+
+    /* The Stamp Frame SVG acts as the clip / border with real scalloped holes */
+    .stamp-edge-svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 10;
+    }
+
+    .card-inner {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      clip-path: url(#stamp-clip);
+      -webkit-clip-path: url(#stamp-clip);
+      background: var(--card-bg);
+      background: linear-gradient(145deg, var(--card-accent) 0%, var(--card-bg) 60%, #6e1518 100%);
+      display: flex;
+      flex-direction: column;
+      padding: 30px 24px;
+      color: #ffffff;
+      user-select: none;
+    }
+
+    /* Front Card Details */
+    .card-front {
+      justify-content: space-between;
+      position: relative;
+    }
+
+    /* Watermark motif */
+    .watermark-letter {
+      position: absolute;
+      top: 75px;
+      left: 20px;
+      font-size: 190px;
+      font-family: 'Rozha One', 'Yatra One', serif;
+      line-height: 1;
+      color: var(--card-watermark);
+      pointer-events: none;
+      user-select: none;
+      z-index: 1;
+      font-weight: 700;
+    }
+
+    /* Vertical Ghost Text along right side like the reference 'Founder' */
+    .vertical-ghost-text {
+      position: absolute;
+      right: 12px;
+      top: 10px;
+      bottom: 20px;
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      font-size: 64px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      color: rgba(255, 255, 255, 0.065);
+      text-transform: uppercase;
+      pointer-events: none;
+      user-select: none;
+      z-index: 1;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .card-front-top {
+      position: relative;
+      z-index: 2;
+    }
+
+    .brand-logo-area {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-logo-main {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 800;
+      font-size: 26px;
+      letter-spacing: -0.5px;
+      line-height: 1.05;
+      color: #ffffff;
+      outline: none;
+    }
+
+    .brand-logo-sub {
+      font-weight: 400;
+      font-size: 13.5px;
+      letter-spacing: 0.8px;
+      color: var(--card-subtext);
+      margin-top: 1px;
+      outline: none;
+    }
+
+    .brand-tagline-quote {
+      margin-top: 14px;
+      font-size: 11px;
+      line-height: 1.45;
+      color: rgba(255, 255, 255, 0.75);
+      max-width: 220px;
+      font-weight: 400;
+      outline: none;
+    }
+
+    /* Bottom Info Card Section with Hairline Box Borders (just like the reference!) */
+    .card-front-bottom {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      border: 1px solid var(--card-line);
+      border-radius: 4px;
+      background: rgba(0, 0, 0, 0.08);
+      backdrop-filter: blur(2px);
+    }
+
+    .info-row {
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--card-line);
+      position: relative;
+    }
+    .info-row:last-child {
+      border-bottom: none;
+    }
+
+    .name-title-block {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .person-name {
+      font-size: 17.5px;
+      font-weight: 700;
+      letter-spacing: -0.2px;
+      color: #ffffff;
+      outline: none;
+    }
+
+    .person-role {
+      font-size: 11.5px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      color: rgba(255, 255, 255, 0.85);
+      text-transform: capitalize;
+      outline: none;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .contact-item {
+      font-size: 11.5px;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.9);
+      letter-spacing: 0.2px;
+      outline: none;
+      word-break: break-all;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .contact-icon {
+      opacity: 0.7;
+      font-size: 10px;
+    }
+
+    /* Back Card Layout */
+    .card-back {
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
+      position: relative;
+    }
+
+    /* Top Accent Tab / Pill (Matching the reference's white tab with Hindi letter) */
+    .top-stamp-tab {
+      position: absolute;
+      top: -3px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #ffffff;
+      color: var(--card-bg);
+      font-weight: 800;
+      font-size: 16px;
+      width: 44px;
+      height: 30px;
+      border-bottom-left-radius: 12px;
+      border-bottom-right-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      font-family: 'Rozha One', 'Yatra One', serif;
+      z-index: 5;
+      outline: none;
+    }
+
+    .back-center-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      width: 100%;
+      margin-top: 36px;
+      z-index: 2;
+    }
+
+    .back-logo-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .back-logo-main {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 800;
+      font-size: 27px;
+      letter-spacing: -0.5px;
+      color: #ffffff;
+      outline: none;
+    }
+
+    .back-logo-sub {
+      font-size: 13px;
+      font-weight: 400;
+      letter-spacing: 1px;
+      color: var(--card-subtext);
+      outline: none;
+    }
+
+    .back-short-detail {
+      font-size: 11.5px;
+      line-height: 1.5;
+      color: rgba(255,255,255,0.85);
+      max-width: 230px;
+      text-align: center;
+      outline: none;
+      font-weight: 400;
+    }
+
+    /* Google Business Profile QR Section */
+    .qr-card-container {
+      background: #ffffff;
+      padding: 12px;
+      border-radius: 14px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      width: 164px;
+      position: relative;
+    }
+
+    .qr-badge-top {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 10px;
+      font-weight: 700;
+      color: #1a73e8;
+      letter-spacing: 0.3px;
+      text-transform: uppercase;
+    }
+
+    .qr-code-box {
+      width: 140px;
+      height: 140px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #ffffff;
+    }
+
+    .qr-code-box img, .qr-code-box svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .qr-scan-hint {
+      font-size: 9.5px;
+      font-weight: 700;
+      color: #475569;
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+      outline: none;
+    }
+
+    /* Bottom URL (yaksharitual.com) */
+    .card-back-bottom {
+      width: 100%;
+      z-index: 2;
+      padding-bottom: 6px;
+    }
+
+    .website-link {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      color: #ffffff;
+      text-align: center;
+      outline: none;
+      display: inline-block;
+      text-decoration: none;
+      opacity: 0.95;
+    }
+
+    /* Editable hint badge on hover */
+    [contenteditable="true"] {
+      cursor: text;
+      transition: background 0.15s, box-shadow 0.15s;
+      border-radius: 2px;
+    }
+    [contenteditable="true"]:hover {
+      background: rgba(255, 255, 255, 0.1);
+      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2);
+    }
+    [contenteditable="true"]:focus {
+      background: rgba(255, 255, 255, 0.18);
+      box-shadow: 0 0 0 2px #ffd014;
+      outline: none;
+    }
+
+    /* Print optimization */
+    @media print {
+      body {
+        background: none;
+        color: black;
+      }
+      header, .sidebar, .canvas-toolbar, .help-box, .card-label {
+        display: none !important;
+      }
+      .workspace {
+        display: block;
+        min-height: auto;
+      }
+      .preview-canvas {
+        background: none;
+        padding: 0;
+        display: block;
+      }
+      .cards-stage {
+        gap: 30px;
+        page-break-after: avoid;
+      }
+      .card-container {
+        filter: none;
+        page-break-inside: avoid;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Application Bar -->
+  <header>
+    <div class="brand-title">
+      <span class="brand-badge">YAKSHA STUDIO</span>
+      <span style="font-weight: 600; font-size: 15px; letter-spacing: -0.2px;">Brand Card Designer & QR Generator</span>
+    </div>
+    <div class="header-actions">
+      <button class="btn btn-secondary" onclick="window.print()">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2M6 14h12v8H6z"/></svg>
+        Print / PDF
+      </button>
+      <button class="btn btn-primary" onclick="downloadCardPNG('front')">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+        Export Front (PNG)
+      </button>
+      <button class="btn btn-primary" onclick="downloadCardPNG('back')">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+        Export Back (PNG)
+      </button>
+    </div>
+  </header>
+
+  <div class="workspace">
+    <!-- Sidebar Controls -->
+    <aside class="sidebar">
+      <div>
+        <div class="sidebar-section-title">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+          Direct Inline Editing
+        </div>
+        <div class="help-box">
+          👉 <strong>Tip:</strong> You can click and edit <strong>any text directly on the card preview</strong>! Changes update instantly in real-time.
+        </div>
+      </div>
+
+      <!-- Google Business Profile Link & QR -->
+      <div>
+        <div class="sidebar-section-title">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          Google Business Profile QR
+        </div>
+        <div class="control-group">
+          <label for="gbp-url">Google Business Profile URL / Maps Link</label>
+          <input type="text" id="gbp-url" placeholder="https://g.page/r/... or Maps Link" value="https://maps.google.com/?cid=yaksha" oninput="updateQRCode()">
+        </div>
+        <div class="control-group">
+          <label for="qr-label-input">QR Badge Label</label>
+          <input type="text" id="qr-label-input" value="Review Us on Google" oninput="syncField('qr-scan-hint', this.value)">
+        </div>
+      </div>
+
+      <!-- Color Palette Preset -->
+      <div>
+        <div class="sidebar-section-title">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24M14.83 9.17l4.24-4.24M14.83 14.83l4.24 4.24M9.17 14.83l-4.24 4.24"/></svg>
+          Color Palette
+        </div>
+        <div class="color-swatches">
+          <div class="swatch active" style="background:#8c1e22;" title="Yaksha Crimson (Original)" onclick="setColorTheme('#8c1e22', '#a32429', this)"></div>
+          <div class="swatch" style="background:#6c181b;" title="Deep Terracotta Lacquer" onclick="setColorTheme('#6c181b', '#841f23', this)"></div>
+          <div class="swatch" style="background:#1b3b36;" title="Sacred Forest Emerald" onclick="setColorTheme('#1b3b36', '#26544d', this)"></div>
+          <div class="swatch" style="background:#232428;" title="Temple Obsidian Charcoal" onclick="setColorTheme('#232428', '#34363d', this)"></div>
+          <div class="swatch" style="background:#824b20;" title="Sacred Sandal & Clay" onclick="setColorTheme('#824b20', '#9d5a26', this)"></div>
+        </div>
+        <div class="control-group" style="margin-top: 12px;">
+          <label for="custom-color">Custom Primary Color</label>
+          <input type="color" id="custom-color" value="#8c1e22" oninput="setCustomColor(this.value)">
+        </div>
+      </div>
+
+      <!-- Brand Details Fields -->
+      <div>
+        <div class="sidebar-section-title">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          Card Details
+        </div>
+        <div class="control-group">
+          <label for="brand-name-input">Brand Title</label>
+          <input type="text" id="brand-name-input" value="yaksha" oninput="syncField('sync-brand-name', this.value)">
+        </div>
+        <div class="control-group">
+          <label for="brand-sub-input">Brand Subtitle</label>
+          <input type="text" id="brand-sub-input" value="rituals" oninput="syncField('sync-brand-sub', this.value)">
+        </div>
+        <div class="control-group">
+          <label for="watermark-input">Watermark Letter / Glyph</label>
+          <input type="text" id="watermark-input" value="य" maxlength="2" oninput="syncField('sync-watermark', this.value); syncField('sync-top-tab', this.value)">
+        </div>
+        <div class="control-group">
+          <label for="vertical-text-input">Side Vertical Ribbon Text</label>
+          <input type="text" id="vertical-text-input" value="RITUALS" oninput="syncField('sync-vertical-text', this.value)">
+        </div>
+        <div class="control-group">
+          <label for="website-input">Website URL</label>
+          <input type="text" id="website-input" value="yaksharitual.com" oninput="syncField('sync-website', this.value)">
+        </div>
+      </div>
+
+    </aside>
+
+    <!-- Interactive Preview Canvas -->
+    <main class="preview-canvas">
+      <!-- Toolbar -->
+      <div class="canvas-toolbar">
+        <button class="canvas-toggle-btn active" id="btn-view-both" onclick="setViewMode('both')">Both Sides</button>
+        <button class="canvas-toggle-btn" id="btn-view-front" onclick="setViewMode('front')">Front Only</button>
+        <button class="canvas-toggle-btn" id="btn-view-back" onclick="setViewMode('back')">Back Only</button>
+      </div>
+
+      <!-- Cards Stage -->
+      <div class="cards-stage" id="cards-stage">
+
+        <!-- FRONT CARD -->
+        <div class="card-wrapper" id="wrapper-front">
+          <div class="card-label">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/></svg>
+            Front Side (Details & Contact)
+          </div>
+          
+          <div class="card-container" id="card-front-container">
+            <!-- Scalloped Stamp Edge Border SVG Overlay -->
+            <svg class="stamp-edge-svg" viewBox="0 0 330 550" preserveAspectRatio="none">
+              <defs>
+                <!-- Stamp Perforation Clip Path for crisp rendering -->
+                <clipPath id="stamp-clip">
+                  <!-- Generated scalloped edge path with exact teeth cuts -->
+                  <path d="
+                    M 24,6 
+                    H 306 
+                    A 18,18 0 0 1 324,24 
+                    V 526 
+                    A 18,18 0 0 1 306,544 
+                    H 24 
+                    A 18,18 0 0 1 6,526 
+                    V 24 
+                    A 18,18 0 0 1 24,6 Z
+                  "/>
+                </clipPath>
+              </defs>
+              <!-- Draw the scalloped dots border around the card like a vintage postage stamp -->
+              <g fill="#eee8e0">
+                <!-- TOP EDGE HOLES -->
+                <circle cx="35" cy="0" r="5" />
+                <circle cx="55" cy="0" r="5" />
+                <circle cx="75" cy="0" r="5" />
+                <circle cx="95" cy="0" r="5" />
+                <circle cx="115" cy="0" r="5" />
+                <circle cx="135" cy="0" r="5" />
+                <circle cx="155" cy="0" r="5" />
+                <circle cx="175" cy="0" r="5" />
+                <circle cx="195" cy="0" r="5" />
+                <circle cx="215" cy="0" r="5" />
+                <circle cx="235" cy="0" r="5" />
+                <circle cx="255" cy="0" r="5" />
+                <circle cx="275" cy="0" r="5" />
+                <circle cx="295" cy="0" r="5" />
+
+                <!-- BOTTOM EDGE HOLES -->
+                <circle cx="35" cy="550" r="5" />
+                <circle cx="55" cy="550" r="5" />
+                <circle cx="75" cy="550" r="5" />
+                <circle cx="95" cy="550" r="5" />
+                <circle cx="115" cy="550" r="5" />
+                <circle cx="135" cy="550" r="5" />
+                <circle cx="155" cy="550" r="5" />
+                <circle cx="175" cy="550" r="5" />
+                <circle cx="195" cy="550" r="5" />
+                <circle cx="215" cy="550" r="5" />
+                <circle cx="235" cy="550" r="5" />
+                <circle cx="255" cy="550" r="5" />
+                <circle cx="275" cy="550" r="5" />
+                <circle cx="295" cy="550" r="5" />
+
+                <!-- LEFT EDGE HOLES -->
+                <circle cx="0" cy="35" r="5" />
+                <circle cx="0" cy="55" r="5" />
+                <circle cx="0" cy="75" r="5" />
+                <circle cx="0" cy="95" r="5" />
+                <circle cx="0" cy="115" r="5" />
+                <circle cx="0" cy="135" r="5" />
+                <circle cx="0" cy="155" r="5" />
+                <circle cx="0" cy="175" r="5" />
+                <circle cx="0" cy="195" r="5" />
+                <circle cx="0" cy="215" r="5" />
+                <circle cx="0" cy="235" r="5" />
+                <circle cx="0" cy="255" r="5" />
+                <circle cx="0" cy="275" r="5" />
+                <circle cx="0" cy="295" r="5" />
+                <circle cx="0" cy="315" r="5" />
+                <circle cx="0" cy="335" r="5" />
+                <circle cx="0" cy="355" r="5" />
+                <circle cx="0" cy="375" r="5" />
+                <circle cx="0" cy="395" r="5" />
+                <circle cx="0" cy="415" r="5" />
+                <circle cx="0" cy="435" r="5" />
+                <circle cx="0" cy="455" r="5" />
+                <circle cx="0" cy="475" r="5" />
+                <circle cx="0" cy="495" r="5" />
+                <circle cx="0" cy="515" r="5" />
+
+                <!-- RIGHT EDGE HOLES -->
+                <circle cx="330" cy="35" r="5" />
+                <circle cx="330" cy="55" r="5" />
+                <circle cx="330" cy="75" r="5" />
+                <circle cx="330" cy="95" r="5" />
+                <circle cx="330" cy="115" r="5" />
+                <circle cx="330" cy="135" r="5" />
+                <circle cx="330" cy="155" r="5" />
+                <circle cx="330" cy="175" r="5" />
+                <circle cx="330" cy="195" r="5" />
+                <circle cx="330" cy="215" r="5" />
+                <circle cx="330" cy="235" r="5" />
+                <circle cx="330" cy="255" r="5" />
+                <circle cx="330" cy="275" r="5" />
+                <circle cx="330" cy="295" r="5" />
+                <circle cx="330" cy="315" r="5" />
+                <circle cx="330" cy="335" r="5" />
+                <circle cx="330" cy="355" r="5" />
+                <circle cx="330" cy="375" r="5" />
+                <circle cx="330" cy="395" r="5" />
+                <circle cx="330" cy="415" r="5" />
+                <circle cx="330" cy="435" r="5" />
+                <circle cx="330" cy="455" r="5" />
+                <circle cx="330" cy="475" r="5" />
+                <circle cx="330" cy="495" r="5" />
+                <circle cx="330" cy="515" r="5" />
+              </g>
+            </svg>
+
+            <div class="card-inner card-front">
+              <!-- Watermark Glyph & Ribbon -->
+              <div class="watermark-letter sync-watermark" contenteditable="true" title="Click to edit watermark character">य</div>
+              <div class="vertical-ghost-text sync-vertical-text" contenteditable="true" title="Click to edit vertical ribbon text">RITUALS</div>
+
+              <!-- Top Brand Section -->
+              <div class="card-front-top">
+                <div class="brand-logo-area">
+                  <div class="brand-logo-main sync-brand-name" contenteditable="true">yaksha</div>
+                  <div class="brand-logo-sub sync-brand-sub" contenteditable="true">rituals</div>
+                </div>
+                <div class="brand-tagline-quote" contenteditable="true">
+                  Handcrafted artisanal rituals, sacred scents & holistic heritage wellness.
+                </div>
+              </div>
+
+              <!-- Bottom Details Section with Crisp Grid Box (Exact match to sample) -->
+              <div class="card-front-bottom">
+                <div class="info-row">
+                  <div class="name-title-block">
+                    <div class="person-name" contenteditable="true">Yaksha Client</div>
+                    <div class="person-role" contenteditable="true">Sacred Botanical Curator</div>
+                  </div>
+                </div>
+                <div class="info-row">
+                  <div class="contact-item" contenteditable="true">
+                    <span class="contact-icon">📞</span> +91 98765 43210
+                  </div>
+                </div>
+                <div class="info-row">
+                  <div class="contact-item" contenteditable="true">
+                    <span class="contact-icon">✉️</span> connect@yaksharitual.com
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- BACK CARD -->
+        <div class="card-wrapper" id="wrapper-back">
+          <div class="card-label">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            Back Side (Google QR & Website)
+          </div>
+
+          <div class="card-container" id="card-back-container">
+            <!-- Scalloped Stamp Edge SVG Overlay -->
+            <svg class="stamp-edge-svg" viewBox="0 0 330 550" preserveAspectRatio="none">
+              <g fill="#eee8e0">
+                <!-- TOP EDGE HOLES -->
+                <circle cx="35" cy="0" r="5" />
+                <circle cx="55" cy="0" r="5" />
+                <circle cx="75" cy="0" r="5" />
+                <circle cx="95" cy="0" r="5" />
+                <circle cx="115" cy="0" r="5" />
+                <circle cx="135" cy="0" r="5" />
+                <circle cx="155" cy="0" r="5" />
+                <circle cx="175" cy="0" r="5" />
+                <circle cx="195" cy="0" r="5" />
+                <circle cx="215" cy="0" r="5" />
+                <circle cx="235" cy="0" r="5" />
+                <circle cx="255" cy="0" r="5" />
+                <circle cx="275" cy="0" r="5" />
+                <circle cx="295" cy="0" r="5" />
+
+                <!-- BOTTOM EDGE HOLES -->
+                <circle cx="35" cy="550" r="5" />
+                <circle cx="55" cy="550" r="5" />
+                <circle cx="75" cy="550" r="5" />
+                <circle cx="95" cy="550" r="5" />
+                <circle cx="115" cy="550" r="5" />
+                <circle cx="135" cy="550" r="5" />
+                <circle cx="155" cy="550" r="5" />
+                <circle cx="175" cy="550" r="5" />
+                <circle cx="195" cy="550" r="5" />
+                <circle cx="215" cy="550" r="5" />
+                <circle cx="235" cy="550" r="5" />
+                <circle cx="255" cy="550" r="5" />
+                <circle cx="275" cy="550" r="5" />
+                <circle cx="295" cy="550" r="5" />
+
+                <!-- LEFT EDGE HOLES -->
+                <circle cx="0" cy="35" r="5" />
+                <circle cx="0" cy="55" r="5" />
+                <circle cx="0" cy="75" r="5" />
+                <circle cx="0" cy="95" r="5" />
+                <circle cx="0" cy="115" r="5" />
+                <circle cx="0" cy="135" r="5" />
+                <circle cx="0" cy="155" r="5" />
+                <circle cx="0" cy="175" r="5" />
+                <circle cx="0" cy="195" r="5" />
+                <circle cx="0" cy="215" r="5" />
+                <circle cx="0" cy="235" r="5" />
+                <circle cx="0" cy="255" r="5" />
+                <circle cx="0" cy="275" r="5" />
+                <circle cx="0" cy="295" r="5" />
+                <circle cx="0" cy="315" r="5" />
+                <circle cx="0" cy="335" r="5" />
+                <circle cx="0" cy="355" r="5" />
+                <circle cx="0" cy="375" r="5" />
+                <circle cx="0" cy="395" r="5" />
+                <circle cx="0" cy="415" r="5" />
+                <circle cx="0" cy="435" r="5" />
+                <circle cx="0" cy="455" r="5" />
+                <circle cx="0" cy="475" r="5" />
+                <circle cx="0" cy="495" r="5" />
+                <circle cx="0" cy="515" r="5" />
+
+                <!-- RIGHT EDGE HOLES -->
+                <circle cx="330" cy="35" r="5" />
+                <circle cx="330" cy="55" r="5" />
+                <circle cx="330" cy="75" r="5" />
+                <circle cx="330" cy="95" r="5" />
+                <circle cx="330" cy="115" r="5" />
+                <circle cx="330" cy="135" r="5" />
+                <circle cx="330" cy="155" r="5" />
+                <circle cx="330" cy="175" r="5" />
+                <circle cx="330" cy="195" r="5" />
+                <circle cx="330" cy="215" r="5" />
+                <circle cx="330" cy="235" r="5" />
+                <circle cx="330" cy="255" r="5" />
+                <circle cx="330" cy="275" r="5" />
+                <circle cx="330" cy="295" r="5" />
+                <circle cx="330" cy="315" r="5" />
+                <circle cx="330" cy="335" r="5" />
+                <circle cx="330" cy="355" r="5" />
+                <circle cx="330" cy="375" r="5" />
+                <circle cx="330" cy="395" r="5" />
+                <circle cx="330" cy="415" r="5" />
+                <circle cx="330" cy="435" r="5" />
+                <circle cx="330" cy="455" r="5" />
+                <circle cx="330" cy="475" r="5" />
+                <circle cx="330" cy="495" r="5" />
+                <circle cx="330" cy="515" r="5" />
+              </g>
+            </svg>
+
+            <div class="card-inner card-back">
+              <!-- Top White Pill Tab with Devanagari Accent (Exact replica from reference) -->
+              <div class="top-stamp-tab sync-top-tab" contenteditable="true" title="Edit top tab emblem">य</div>
+
+              <!-- Center Focus Area -->
+              <div class="back-center-content">
+                <div class="back-logo-block">
+                  <div class="back-logo-main sync-brand-name" contenteditable="true">yaksha</div>
+                  <div class="back-logo-sub sync-brand-sub" contenteditable="true">rituals</div>
+                </div>
+
+                <div class="back-short-detail" contenteditable="true">
+                  Rooted in sacred tradition, invoking pure energy and timeless harmony.
+                </div>
+
+                <!-- Google Business Profile QR Card -->
+                <div class="qr-card-container">
+                  <div class="qr-badge-top">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                      <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                      <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" fill="#FBBC05"/>
+                      <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" fill="#EA4335"/>
+                    </svg>
+                    <span>Google Profile</span>
+                  </div>
+
+                  <div class="qr-code-box" id="qr-box">
+                    <!-- Dynamic QR Code rendered here -->
+                  </div>
+
+                  <div class="qr-scan-hint" id="qr-scan-hint" contenteditable="true">
+                    Review Us On Google
+                  </div>
+                </div>
+              </div>
+
+              <!-- Bottom Website Section (yaksharitual.com) -->
+              <div class="card-back-bottom">
+                <a href="https://yaksharitual.com" target="_blank" class="website-link sync-website" contenteditable="true">
+                  yaksharitual.com
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- Client-Side High Quality QR Code Generator (Zero Dependencies) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <!-- HTML2Canvas for 300DPI PNG Export -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+  <script>
+    let qrcodeInstance = null;
+
+    // Initialize QR Code
+    function updateQRCode() {
+      const urlInput = document.getElementById('gbp-url').value.trim() || 'https://yaksharitual.com';
+      const qrBox = document.getElementById('qr-box');
+      qrBox.innerHTML = '';
+
+      if (window.QRCode) {
+        qrcodeInstance = new QRCode(qrBox, {
+          text: urlInput,
+          width: 136,
+          height: 136,
+          colorDark: "#18181b",
+          colorLight: "#ffffff",
+          correctLevel: QRCode.CorrectLevel.H
+        });
+      } else {
+        // Fallback using direct vector-sharp image API
+        const img = document.createElement('img');
+        img.src = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(urlInput)}`;
+        img.alt = 'QR Code';
+        qrBox.appendChild(img);
+      }
+    }
+
+    // Set Color Theme
+    function setColorTheme(primary, accent, element) {
+      document.documentElement.style.setProperty('--card-bg', primary);
+      document.documentElement.style.setProperty('--card-accent', accent);
+      document.getElementById('custom-color').value = primary;
+
+      if (element) {
+        document.querySelectorAll('.swatch').forEach(s => s.classList.remove('active'));
+        element.classList.add('active');
+      }
+    }
+
+    function setCustomColor(hex) {
+      document.documentElement.style.setProperty('--card-bg', hex);
+      // Generate slightly lighter accent
+      document.documentElement.style.setProperty('--card-accent', adjustColor(hex, 18));
+      document.querySelectorAll('.swatch').forEach(s => s.classList.remove('active'));
+    }
+
+    function adjustColor(col, amt) {
+      let usePound = false;
+      if (col[0] == "#") {
+        col = col.slice(1);
+        usePound = true;
+      }
+      let num = parseInt(col, 16);
+      let r = (num >> 16) + amt;
+      if (r > 255) r = 255; else if (r < 0) r = 0;
+      let b = ((num >> 8) & 0x00FF) + amt;
+      if (b > 255) b = 255; else if (b < 0) b = 0;
+      let g = (num & 0x0000FF) + amt;
+      if (g > 255) g = 255; else if (g < 0) g = 0;
+      return (usePound ? "#" : "") + (g | (b << 8) | (r << 16)).toString(16).padStart(6, '0');
+    }
+
+    // Two-way field sync
+    function syncField(className, value) {
+      document.querySelectorAll('.' + className).forEach(el => {
+        el.innerText = value;
+      });
+    }
+
+    // Also sync inline edits back to form inputs
+    document.addEventListener('input', function(e) {
+      if (e.target.classList.contains('sync-brand-name')) {
+        syncField('sync-brand-name', e.target.innerText);
+        document.getElementById('brand-name-input').value = e.target.innerText;
+      } else if (e.target.classList.contains('sync-brand-sub')) {
+        syncField('sync-brand-sub', e.target.innerText);
+        document.getElementById('brand-sub-input').value = e.target.innerText;
+      } else if (e.target.classList.contains('sync-watermark')) {
+        syncField('sync-watermark', e.target.innerText);
+        syncField('sync-top-tab', e.target.innerText);
+        document.getElementById('watermark-input').value = e.target.innerText;
+      } else if (e.target.classList.contains('sync-top-tab')) {
+        syncField('sync-watermark', e.target.innerText);
+        syncField('sync-top-tab', e.target.innerText);
+        document.getElementById('watermark-input').value = e.target.innerText;
+      } else if (e.target.classList.contains('sync-website')) {
+        syncField('sync-website', e.target.innerText);
+        document.getElementById('website-input').value = e.target.innerText;
+      }
+    });
+
+    // View toggle
+    function setViewMode(mode) {
+      const front = document.getElementById('wrapper-front');
+      const back = document.getElementById('wrapper-back');
+      document.querySelectorAll('.canvas-toggle-btn').forEach(b => b.classList.remove('active'));
+
+      if (mode === 'both') {
+        front.style.display = 'flex';
+        back.style.display = 'flex';
+        document.getElementById('btn-view-both').classList.add('active');
+      } else if (mode === 'front') {
+        front.style.display = 'flex';
+        back.style.display = 'none';
+        document.getElementById('btn-view-front').classList.add('active');
+      } else if (mode === 'back') {
+        front.style.display = 'none';
+        back.style.display = 'flex';
+        document.getElementById('btn-view-back').classList.add('active');
+      }
+    }
+
+    // High Resolution PNG Export
+    async function downloadCardPNG(side) {
+      const targetId = side === 'front' ? 'card-front-container' : 'card-back-container';
+      const element = document.getElementById(targetId);
+      if (!element) return;
+
+      const btn = event.currentTarget;
+      const originalText = btn.innerHTML;
+      btn.innerHTML = 'Rendering...';
+
+      try {
+        const canvas = await html2canvas(element, {
+          scale: 3, // 3x standard DPI for crisp print quality
+          useCORS: true,
+          backgroundColor: null,
+          logging: false
+        });
+
+        const link = document.createElement('a');
+        link.download = `yaksha-card-${side}.png`;
+        link.href = canvas.toDataURL('image/png');
+        link.click();
+      } catch (err) {
+        console.error('Export failed:', err);
+        alert('Could not export image. You can also use the "Print / PDF" button to save as PDF.');
+      } finally {
+        btn.innerHTML = originalText;
+      }
+    }
+
+    // Run on load
+    window.addEventListener('DOMContentLoaded', () => {
+      updateQRCode();
+    });
+  </script>
+</body>
+</html>

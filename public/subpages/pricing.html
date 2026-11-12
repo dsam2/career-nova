@@ -3135,22 +3135,14 @@ section[data-framer-name="FAQs"] div[data-framer-name="Button"] a {
   box-sizing: border-box !important;
 }
 
-/* 4. Fix Duplicate Text: Ensure ONLY ONE text line displays (hide roll-over duplicate globally) */
+/* 4. Text Container: 23px clipping for authentic vertical roll */
 .framer-17hpsvh {
   overflow: hidden !important;
-  height: 24px !important;
-  max-height: 24px !important;
-  display: block !important;
+  height: 23px !important;
+  max-height: 23px !important;
   position: relative !important;
-}
-
-.framer-17hpsvh .framer-g7muo8,
-.framer-17hpsvh > div:nth-child(2) {
-  display: none !important;
-  visibility: hidden !important;
-  height: 0 !important;
-  width: 0 !important;
-  opacity: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
 }
 
 section[data-framer-name="FAQs"] .framer-17hpsvh p,
@@ -3280,40 +3272,12 @@ div[data-framer-name="CTA"].framer-1naimee {
   white-space: nowrap !important;
 }
 
-/* Prevent doubled button text */
-.framer-17hpsvh {
-  overflow: hidden !important;
-  height: auto !important;
-  display: block !important;
-}
-.framer-17hpsvh .framer-g7muo8,
-.framer-17hpsvh > div:nth-child(2) {
-  display: none !important;
-  visibility: hidden !important;
-  height: 0 !important;
-  width: 0 !important;
-}
-
-/* Prevent duplicate hover arrow SVG leaking out as a stray slash */
-.framer-f97dkt .framer-1ajydfw,
-div[data-framer-name="arrow"] .framer-1ajydfw {
-  display: none !important;
-  visibility: hidden !important;
-  width: 0 !important;
-  height: 0 !important;
-}
-.framer-f97dkt,
-div[data-framer-name="arrow"] {
-  overflow: hidden !important;
-  position: relative !important;
-}
-
-
 /* =========================================================================
-   SECTION 23: BUTTON ARROW ANIMATION FIX (CLEAN BRAND GOLD, ZERO GLOW, ZERO BLACK)
-   - Restores original clean button & gold badge styling (NO black background, NO glow)
-   - Fixes the missing arrow icon inside the yellow circular badge
-   - Smooth diagonal hover glide animation for the arrow
+   SECTION 23: AUTHENTIC FRAMER BUTTON HOVER ANIMATION (ROLLOVER & ARROW LEAP)
+   - Matches the original main website button animation 1:1
+   - Text roll: Top text rolls up and out while duplicate text rolls in from below
+   - Arrow leap: Arrow 1 shoots diagonally up-right, Arrow 2 enters from bottom-left
+   - Pure brand gold styling, zero glow, zero black backgrounds
    ========================================================================= */
 
 /* 1. Global CTA & Primary Buttons: Clean Gold Pill */
@@ -3325,50 +3289,56 @@ div[data-framer-name="Hero"] a[data-framer-name="Button"],
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
-  gap: 12px !important;
-  padding: 8px 10px 8px 24px !important;
+  gap: 16px !important;
+  padding: 6px 6px 6px 24px !important;
   border-radius: 9999px !important;
   background: #D9A53A !important;
   background-color: #D9A53A !important;
   box-shadow: none !important;
   text-decoration: none !important;
   cursor: pointer !important;
-  overflow: visible !important;
+  overflow: hidden !important;
   border: none !important;
-  transition: transform 0.2s ease, background 0.2s ease !important;
+  transition: background 0.25s ease !important;
 }
 
-/* 2. Button Hover: Subtle lift, clean gold highlight, NO GLOW */
+/* Button Hover: Subtle highlight, NO glow */
 a.framer-Xl5mj.framer-39xvlj:hover,
 a[data-framer-name="Primary"]:hover,
 a[name="Button"]:hover,
 div[data-framer-name="Hero"] a[data-framer-name="Button"]:hover,
 .framer-1npfag2 a[data-framer-name="Button"]:hover {
-  transform: translateY(-1px) !important;
-  box-shadow: none !important;
   background: #F0BE55 !important;
   background-color: #F0BE55 !important;
+  box-shadow: none !important;
 }
 
-/* 3. Text Stability: Single crisp line of pure white text */
+/* 2. Authentic Framer Text Rollover Animation */
 .framer-Xl5mj .framer-17hpsvh,
 a[name="Button"] .framer-17hpsvh,
 div[data-framer-name="Hero"] a[data-framer-name="Button"] .framer-17hpsvh {
   display: flex !important;
-  align-items: center !important;
-  height: auto !important;
-  max-height: none !important;
-  overflow: visible !important;
+  flex-direction: column !important;
+  height: 23px !important;
+  max-height: 23px !important;
+  overflow: hidden !important;
   position: relative !important;
 }
 
 .framer-Xl5mj .framer-17hpsvh .framer-n434ag,
-a[name="Button"] .framer-17hpsvh .framer-n434ag {
+.framer-Xl5mj .framer-17hpsvh .framer-g7muo8,
+a[name="Button"] .framer-17hpsvh .framer-n434ag,
+a[name="Button"] .framer-17hpsvh .framer-g7muo8 {
   display: flex !important;
   align-items: center !important;
-  height: auto !important;
+  height: 23px !important;
+  line-height: 23px !important;
   position: relative !important;
-  transform: none !important;
+  white-space: nowrap !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  transform: translateY(0);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 
 .framer-Xl5mj .framer-17hpsvh p,
@@ -3379,20 +3349,25 @@ a[name="Button"] .framer-17hpsvh p {
   letter-spacing: -0.01em !important;
   text-shadow: none !important;
   margin: 0 !important;
-  line-height: normal !important;
+  line-height: 23px !important;
   white-space: nowrap !important;
 }
 
-/* Hide Framer duplicate rollover text copy */
-.framer-Xl5mj .framer-17hpsvh .framer-g7muo8,
-.framer-Xl5mj .framer-17hpsvh > div:nth-child(2) {
-  display: none !important;
-  visibility: hidden !important;
-  width: 0 !important;
-  height: 0 !important;
+/* On Button Hover: Top text rolls up, bottom text rolls into place */
+a.framer-Xl5mj:hover .framer-17hpsvh .framer-n434ag,
+a.framer-Xl5mj:hover .framer-17hpsvh .framer-g7muo8,
+a[data-framer-name="Primary"]:hover .framer-17hpsvh .framer-n434ag,
+a[data-framer-name="Primary"]:hover .framer-17hpsvh .framer-g7muo8,
+a[name="Button"]:hover .framer-17hpsvh .framer-n434ag,
+a[name="Button"]:hover .framer-17hpsvh .framer-g7muo8,
+div[data-framer-name="Hero"] a[data-framer-name="Button"]:hover .framer-17hpsvh .framer-n434ag,
+div[data-framer-name="Hero"] a[data-framer-name="Button"]:hover .framer-17hpsvh .framer-g7muo8,
+.framer-1npfag2 a[data-framer-name="Button"]:hover .framer-17hpsvh .framer-n434ag,
+.framer-1npfag2 a[data-framer-name="Button"]:hover .framer-17hpsvh .framer-g7muo8 {
+  transform: translateY(-23px) !important;
 }
 
-/* 4. The Arrow Circular Badge: Original Yellow/Gold circular badge matching button, NO BLACK, NO BORDER */
+/* 3. The Arrow Badge: Authentic Gold circular badge */
 .framer-f97dkt,
 div[data-framer-name="arrow"],
 a.framer-Xl5mj .framer-f97dkt,
@@ -3414,22 +3389,19 @@ div[data-framer-name="Hero"] a[data-framer-name="Button"] .framer-f97dkt {
   overflow: hidden !important;
   padding: 0 !important;
   margin: 0 0 0 4px !important;
-  transition: transform 0.25s ease !important;
+  transition: background-color 0.25s ease !important;
 }
 
-/* 5. The Arrow SVG Icon: Centered, crisp white arrow */
+/* Arrow 1: Centered at resting state */
 .framer-f97dkt svg.framer-164vrxp,
 .framer-f97dkt svg:first-child,
 div[data-framer-name="arrow"] svg:first-child {
   display: block !important;
   visibility: visible !important;
   opacity: 1 !important;
-  position: relative !important;
-  inset: auto !important;
-  top: auto !important;
-  right: auto !important;
-  bottom: auto !important;
-  left: auto !important;
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
   width: 14px !important;
   height: 14px !important;
   color: #FFFFFF !important;
@@ -3437,42 +3409,50 @@ div[data-framer-name="arrow"] svg:first-child {
   fill: none !important;
   --18mrqx2: #FFFFFF !important;
   stroke-width: 2px !important;
-  transform: translate(0, 0) !important;
-  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  transform: translate(-50%, -50%) !important;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 
-/* Hide duplicate fallback SVG so it never leaks or collides */
+/* Arrow 2: Hidden at bottom-left outside clipping container */
 .framer-f97dkt svg.framer-1ajydfw,
 .framer-f97dkt svg:nth-child(2),
 div[data-framer-name="arrow"] svg:nth-child(2) {
-  display: none !important;
-  visibility: hidden !important;
-  width: 0 !important;
-  height: 0 !important;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  width: 14px !important;
+  height: 14px !important;
+  color: #FFFFFF !important;
+  stroke: #FFFFFF !important;
+  fill: none !important;
+  --18mrqx2: #FFFFFF !important;
+  stroke-width: 2px !important;
+  transform: translate(-180%, 80%) !important;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 
-/* 6. Arrow Animation on Button Hover: Smooth diagonal leap, NO BLACK BACKGROUND */
-a.framer-Xl5mj:hover .framer-f97dkt,
-a[data-framer-name="Primary"]:hover .framer-f97dkt,
-a[name="Button"]:hover .framer-f97dkt,
-div[data-framer-name="Hero"] a[data-framer-name="Button"]:hover .framer-f97dkt,
-.framer-1npfag2 a[data-framer-name="Button"]:hover .framer-f97dkt {
-  background-color: #FFBF00 !important;
-  background: #FFBF00 !important;
-  border: none !important;
-  box-shadow: none !important;
-}
-
+/* ON HOVER: Authentic Framer Arrow Leap! */
+/* Arrow 1 shoots diagonally up-right */
 a.framer-Xl5mj:hover .framer-f97dkt svg.framer-164vrxp,
 a.framer-Xl5mj:hover .framer-f97dkt svg:first-child,
 a[data-framer-name="Primary"]:hover .framer-f97dkt svg:first-child,
 a[name="Button"]:hover .framer-f97dkt svg:first-child,
 div[data-framer-name="Hero"] a[data-framer-name="Button"]:hover .framer-f97dkt svg:first-child,
 .framer-1npfag2 a[data-framer-name="Button"]:hover .framer-f97dkt svg:first-child {
-  transform: translate(3px, -3px) !important;
-  color: #FFFFFF !important;
-  stroke: #FFFFFF !important;
-  --18mrqx2: #FFFFFF !important;
+  transform: translate(80%, -180%) !important;
+}
+
+/* Arrow 2 glides in from bottom-left to center */
+a.framer-Xl5mj:hover .framer-f97dkt svg.framer-1ajydfw,
+a.framer-Xl5mj:hover .framer-f97dkt svg:nth-child(2),
+a[data-framer-name="Primary"]:hover .framer-f97dkt svg:nth-child(2),
+a[name="Button"]:hover .framer-f97dkt svg:nth-child(2),
+div[data-framer-name="Hero"] a[data-framer-name="Button"]:hover .framer-f97dkt svg:nth-child(2),
+.framer-1npfag2 a[data-framer-name="Button"]:hover .framer-f97dkt svg:nth-child(2) {
+  transform: translate(-50%, -50%) !important;
 }
 
 
