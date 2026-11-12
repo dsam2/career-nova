@@ -1,0 +1,215 @@
+[22:09:11] [info] Source   : https://sterling.framer.media/
+[22:09:11] [info] Output   : X:\KODENCORE\career_nova\sterling-framer-export
+[22:09:11] [info] Platform : Framer
+[22:09:11] [info] DPR      : 1
+[22:09:11] [info] Subpages : enabled
+[22:09:11] [log] Output directory structure created
+[22:09:11] [log] Fetching SSR HTML from https://sterling.framer.media/
+[22:09:12] [ok] SSR HTML fetched (971.2 KB)
+[22:09:12] [log] Launching headless Chromium...
+[22:09:14] [ok] Chromium launched
+[22:09:14] [log] Stealth hardening applied (Chrome 148.0.7778.97)
+[22:09:14] [log] Viewport set to 1440x900 at 1x DPR
+[22:09:14] [log] Blocking 8 tracking domains:
+[22:09:14] [log]   - sentry.io
+[22:09:14] [log]   - www.googletagmanager.com
+[22:09:14] [log]   - connect.facebook.net
+[22:09:14] [log]   - stats.g.doubleclick.net
+[22:09:14] [log]   - google-analytics.com
+[22:09:14] [log]   - events.framer.com
+[22:09:14] [log]   - api.framer.com
+[22:09:14] [log]   - collect.frameranalytics.com
+[22:09:14] [log] Network interception enabled
+[22:09:14] [info] Navigating to https://sterling.framer.media/
+[22:09:14] [ok] Document loaded; waiting for page content and resources
+[22:09:14] [log] Intercepted 1 resources, blocked 0 tracking requests, skipped 0 platform assets
+[22:09:14] [log] Checking DOM-based platform detection...
+[22:09:15] [log] Hydration content found: #main
+[22:09:26] [log] Waiting for font layout and response bodies
+[22:09:27] [log] Resources settled
+[22:09:27] [log] Captured HTML and CSSOM (998.4 KB)
+[22:09:27] [ok] Captured 93 network resources total
+[22:09:27] [log]   CSS: 0 | JS: 57 | Images: 29 | Fonts: 3
+[22:09:27] [log] Scanning page for internal links...
+[22:09:27] [log] Found 19 sub-page links on the home page
+[22:09:27] [log]   Navigating to sub-page: https://sterling.framer.media/services
+[22:09:28] [log] Hydration content found: #main
+[22:09:36] [log] Waiting for font layout and response bodies
+[22:09:36] [log] Resources settled
+[22:09:36] [log]   Sub-page fetched: 454.9 KB
+[22:09:36] [log]   Saved: subpages/services.html
+[22:09:36] [log]   Navigating to sub-page: https://sterling.framer.media/case-studies
+[22:09:38] [log] Hydration content found: #main
+[22:09:49] [log] Network idle timeout reached (continuing anyway)
+[22:09:49] [log] Waiting for font layout and response bodies
+[22:09:49] [log] Resources settled
+[22:09:49] [log]   Sub-page fetched: 425.6 KB
+[22:09:49] [log]   Saved: subpages/case-studies.html
+[22:09:49] [log]   Discovered 2 new link(s) on case-studies
+[22:09:49] [log]   Navigating to sub-page: https://sterling.framer.media/pricing
+[22:09:50] [log] Hydration content found: #main
+[22:10:01] [log] Network idle timeout reached (continuing anyway)
+[22:10:01] [log] Waiting for font layout and response bodies
+[22:10:01] [log] Resources settled
+[22:10:01] [log]   Sub-page fetched: 507.0 KB
+[22:10:01] [log]   Saved: subpages/pricing.html
+[22:10:01] [log]   Navigating to sub-page: https://sterling.framer.media/about
+[22:10:02] [log] Hydration content found: #main
+[22:10:16] [log] Network idle timeout reached (continuing anyway)
+[22:10:16] [log] Waiting for font layout and response bodies
+[22:10:16] [log] Resources settled
+[22:10:16] [log]   Sub-page fetched: 772.9 KB
+[22:10:16] [log]   Saved: subpages/about.html
+[22:10:16] [log]   Navigating to sub-page: https://sterling.framer.media/blogs
+[22:10:17] [log] Hydration content found: #main
+[22:10:28] [log] Network idle timeout reached (continuing anyway)
+[22:10:28] [log] Waiting for font layout and response bodies
+[22:10:28] [log] Resources settled
+[22:10:28] [log]   Sub-page fetched: 433.9 KB
+[22:10:28] [log]   Saved: subpages/blogs.html
+[22:10:28] [log]   Discovered 2 new link(s) on blogs
+[22:10:28] [log]   Navigating to sub-page: https://sterling.framer.media/contact
+[22:10:29] [log] Hydration content found: #main
+[22:10:40] [log] Network idle timeout reached (continuing anyway)
+[22:10:40] [log] Waiting for font layout and response bodies
+[22:10:40] [log] Resources settled
+[22:10:40] [log]   Sub-page fetched: 399.3 KB
+[22:10:40] [log]   Saved: subpages/contact.html
+[22:10:40] [log]   Navigating to sub-page: https://sterling.framer.media/services/digital-transformation
+[22:10:41] [log] Hydration content found: #main
+[22:10:52] [log] Network idle timeout reached (continuing anyway)
+[22:10:52] [log] Waiting for font layout and response bodies
+[22:10:52] [log] Resources settled
+[22:10:52] [log]   Sub-page fetched: 479.9 KB
+[22:10:52] [log]   Saved: subpages/services_digital-transformation.html
+[22:10:52] [log]   Navigating to sub-page: https://sterling.framer.media/services/leadership-advisory
+[22:10:53] [log] Hydration content found: #main
+[22:11:05] [log] Network idle timeout reached (continuing anyway)
+[22:11:05] [log] Waiting for font layout and response bodies
+[22:11:05] [log] Resources settled
+[22:11:05] [log]   Sub-page fetched: 478.5 KB
+[22:11:05] [log]   Saved: subpages/services_leadership-advisory.html
+[22:11:05] [log]   Navigating to sub-page: https://sterling.framer.media/services/strategic-advisory
+[22:11:06] [log] Hydration content found: #main
+[22:11:17] [log] Network idle timeout reached (continuing anyway)
+[22:11:17] [log] Waiting for font layout and response bodies
+[22:11:17] [log] Resources settled
+[22:11:17] [log]   Sub-page fetched: 480.1 KB
+[22:11:17] [log]   Saved: subpages/services_strategic-advisory.html
+[22:11:17] [log]   Navigating to sub-page: https://sterling.framer.media/services/market-expansion
+[22:11:18] [log] Hydration content found: #main
+[22:11:30] [log] Network idle timeout reached (continuing anyway)
+[22:11:30] [log] Waiting for font layout and response bodies
+[22:11:30] [log] Resources settled
+[22:11:30] [log]   Sub-page fetched: 479.6 KB
+[22:11:30] [log]   Saved: subpages/services_market-expansion.html
+[22:11:30] [log]   Navigating to sub-page: https://sterling.framer.media/services/brand-experience
+[22:11:31] [log] Hydration content found: #main
+[22:11:42] [log] Network idle timeout reached (continuing anyway)
+[22:11:42] [log] Waiting for font layout and response bodies
+[22:11:42] [log] Resources settled
+[22:11:43] [log]   Sub-page fetched: 480.6 KB
+[22:11:43] [log]   Saved: subpages/services_brand-experience.html
+[22:11:43] [log]   Navigating to sub-page: https://sterling.framer.media/case-studies/northbridge
+[22:11:45] [log] Hydration content found: #main
+[22:11:57] [log] Network idle timeout reached (continuing anyway)
+[22:11:57] [log] Waiting for font layout and response bodies
+[22:11:57] [log] Resources settled
+[22:11:57] [log]   Sub-page fetched: 492.8 KB
+[22:11:57] [log]   Saved: subpages/case-studies_northbridge.html
+[22:11:57] [log]   Navigating to sub-page: https://sterling.framer.media/case-studies/apex-industrial
+[22:11:58] [log] Hydration content found: #main
+[22:12:10] [log] Network idle timeout reached (continuing anyway)
+[22:12:10] [log] Waiting for font layout and response bodies
+[22:12:10] [log] Resources settled
+[22:12:10] [log]   Sub-page fetched: 494.9 KB
+[22:12:10] [log]   Saved: subpages/case-studies_apex-industrial.html
+[22:12:10] [log]   Navigating to sub-page: https://sterling.framer.media/case-studies/horizon-retail-co.
+[22:12:11] [log] Hydration content found: #main
+[22:12:22] [log] Network idle timeout reached (continuing anyway)
+[22:12:22] [log] Waiting for font layout and response bodies
+[22:12:22] [log] Resources settled
+[22:12:23] [log]   Sub-page fetched: 493.9 KB
+[22:12:23] [log]   Saved: subpages/case-studies_horizon-retail-co_.html
+[22:12:23] [log]   Navigating to sub-page: https://sterling.framer.media/blogs/making-better-decisions-with-business-data
+[22:12:23] [log] Hydration content found: #main
+[22:12:35] [log] Network idle timeout reached (continuing anyway)
+[22:12:35] [log] Waiting for font layout and response bodies
+[22:12:35] [log] Resources settled
+[22:12:35] [log]   Sub-page fetched: 473.9 KB
+[22:12:35] [log]   Saved: subpages/blogs_making-better-decisions-with-business-data.html
+[22:12:35] [log]   Navigating to sub-page: https://sterling.framer.media/blogs/why-every-business-needs-strategic-planning
+[22:12:37] [log] Hydration content found: #main
+[22:12:48] [log] Network idle timeout reached (continuing anyway)
+[22:12:48] [log] Waiting for font layout and response bodies
+[22:12:48] [log] Resources settled
+[22:12:48] [log]   Sub-page fetched: 473.2 KB
+[22:12:48] [log]   Saved: subpages/blogs_why-every-business-needs-strategic-planning.html
+[22:12:48] [log]   Navigating to sub-page: https://sterling.framer.media/blogs/how-strong-leadership-creates-lasting-business-success
+[22:12:49] [log] Hydration content found: #main
+[22:13:01] [log] Network idle timeout reached (continuing anyway)
+[22:13:01] [log] Waiting for font layout and response bodies
+[22:13:01] [log] Resources settled
+[22:13:01] [log]   Sub-page fetched: 473.5 KB
+[22:13:01] [log]   Saved: subpages/blogs_how-strong-leadership-creates-lasting-business-success.html
+[22:13:01] [log]   Navigating to sub-page: https://sterling.framer.media/services/operational-excellence
+[22:13:02] [log] Hydration content found: #main
+[22:13:14] [log] Network idle timeout reached (continuing anyway)
+[22:13:14] [log] Waiting for font layout and response bodies
+[22:13:14] [log] Resources settled
+[22:13:14] [log]   Sub-page fetched: 480.3 KB
+[22:13:14] [log]   Saved: subpages/services_operational-excellence.html
+[22:13:14] [log]   Navigating to sub-page: https://sterling.framer.media/services/business-strategy
+[22:13:15] [log] Hydration content found: #main
+[22:13:26] [log] Network idle timeout reached (continuing anyway)
+[22:13:26] [log] Waiting for font layout and response bodies
+[22:13:26] [log] Resources settled
+[22:13:26] [log]   Sub-page fetched: 480.2 KB
+[22:13:26] [log]   Saved: subpages/services_business-strategy.html
+[22:13:26] [log]   Navigating to sub-page: https://sterling.framer.media/case-studies/everwell-network
+[22:13:27] [log] Hydration content found: #main
+[22:13:39] [log] Network idle timeout reached (continuing anyway)
+[22:13:39] [log] Waiting for font layout and response bodies
+[22:13:39] [log] Resources settled
+[22:13:39] [log]   Sub-page fetched: 492.6 KB
+[22:13:39] [log]   Saved: subpages/case-studies_everwell-network.html
+[22:13:39] [log]   Navigating to sub-page: https://sterling.framer.media/case-studies/vertex-digital
+[22:13:40] [log] Hydration content found: #main
+[22:13:51] [log] Network idle timeout reached (continuing anyway)
+[22:13:51] [log] Waiting for font layout and response bodies
+[22:13:51] [log] Resources settled
+[22:13:51] [log]   Sub-page fetched: 493.1 KB
+[22:13:51] [log]   Saved: subpages/case-studies_vertex-digital.html
+[22:13:51] [log]   Navigating to sub-page: https://sterling.framer.media/blogs/five-strategies-for-sustainable-business-growth
+[22:13:53] [log] Hydration content found: #main
+[22:14:04] [log] Network idle timeout reached (continuing anyway)
+[22:14:04] [log] Waiting for font layout and response bodies
+[22:14:04] [log] Resources settled
+[22:14:05] [log]   Sub-page fetched: 474.8 KB
+[22:14:05] [log]   Saved: subpages/blogs_five-strategies-for-sustainable-business-growth.html
+[22:14:05] [log]   Navigating to sub-page: https://sterling.framer.media/blogs/improving-operational-efficiency-without-costs-increase
+[22:14:05] [log] Hydration content found: #main
+[22:14:17] [log] Network idle timeout reached (continuing anyway)
+[22:14:17] [log] Waiting for font layout and response bodies
+[22:14:17] [log] Resources settled
+[22:14:17] [log]   Sub-page fetched: 472.6 KB
+[22:14:18] [log]   Saved: subpages/blogs_improving-operational-efficiency-without-costs-increase.html
+[22:14:18] [ok] Sub-pages crawled: 23
+[22:14:27] [log] Browser closed
+[22:14:27] [ok] Queued 151 resource(s) declared in HTML but never requested
+[22:14:27] [log] Starting download of 308 assets and their CSS/HTML dependencies
+[22:14:30] [ok] Downloads complete: 308 succeeded, 138 from cache
+[22:14:37] [ok] Lazy-loaded chunks resolved: 10
+[22:14:37] [log] Starting HTML post-processing...
+[22:14:37] [log] HTML size: 998.4 KB
+[22:14:38] [ok] Index HTML pipeline complete
+[22:14:41] [log] Rewrote URLs in 36 JS/CSS files
+[22:14:42] [ok] Sub-pages linked to local assets: 23/23
+[22:14:42] [ok] Captured asset URLs rewritten to local paths
+[22:14:53] [ok] Formatted 82/82 JS/MJS files
+[22:14:53] [log] Writing index.html (1034.0 KB)...
+[22:14:53] [ok] index.html written
+[22:14:53] [log] serve.js written
+[22:14:53] [log] package.json written for serve.js
+[22:14:53] [ok] Output build complete
+[22:14:53] [ok] Export complete!

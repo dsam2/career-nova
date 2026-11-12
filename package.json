@@ -1,0 +1,18 @@
+{
+  "name": "career-nova",
+  "version": "1.0.0",
+  "description": "CareerNova Education Services - Premier admissions & career counselling for Indian universities",
+  "main": "career-nova-export/serve.js",
+  "type": "module",
+  "scripts": {
+    "start": "node career-nova-export/serve.js -p 8080 --no-ui",
+    "serve": "node career-nova-export/serve.js -p 8080 --no-ui"
+  },
+  "keywords": [
+    "career-nova",
+    "education-counselling",
+    "indian-admissions"
+  ],
+  "author": "CareerNova",
+  "license": "ISC"
+}

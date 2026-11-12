@@ -1,0 +1,8 @@
+{
+  "name": "career-nova",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "serve": "node serve.js -p 8080 --no-ui"
+  }
+}
