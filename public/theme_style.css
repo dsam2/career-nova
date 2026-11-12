@@ -1,0 +1,2605 @@
+
+  :root {
+    --cn-white: #FFFFFF;
+    --cn-cream: #F7F3E8;
+    --cn-navy-900: #081838;
+    --cn-navy-800: #0C2250;
+    --cn-navy-700: #173A78;
+    --cn-gold-500: #D9A53A;
+    --cn-gold-400: #F0BE55;
+    --cn-gold-700: #8A5A06;
+    --cn-text-muted-light: #4A5878;
+    --cn-text-muted-dark: #C7D0E0;
+    --cn-border-light: #E3DCC8;
+    --cn-border-dark: rgba(255, 255, 255, 0.12);
+    --token-6d152444-b214-4d88-ac2d-36028b1469f8: #F7F3E8 !important;
+    --token-2102cf31-f5f6-4625-9a76-51847e9aba45: #D9A53A !important;
+  }
+
+  body {
+    background-color: #081838 !important;
+    color: #FFFFFF !important;
+  }
+
+  /* =========================================================================
+     1. NAVBAR: Transparent floating glass (NO solid white bar), NO yellow highlights on links
+     ========================================================================= */
+  nav[data-framer-name="Desktop navigation"],
+  .framer-1vs21cr-container nav,
+  .framer-AsZ1t,
+  .framer-wye0lu,
+  header {
+    background-color: transparent !important;
+    background: transparent !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border-color: rgba(255, 255, 255, 0.08) !important;
+  }
+
+  /* Desktop Nav Links (Services, Case Studies, Pricing, About, Blog): NO BUTTON / PILL HIGHLIGHTS */
+  .framer-wye0lu div[data-framer-name="Nav items"] a,
+  .framer-wye0lu .framer-OtDDP,
+  .framer-OtDDP.framer-v-1dz52zn,
+  div[data-framer-name="Nav items"] a,
+  div[data-framer-name="Nav items"] .framer-OtDDP {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    border-color: transparent !important;
+    box-shadow: none !important;
+  }
+  .framer-wye0lu div[data-framer-name="Nav items"] a *,
+  .framer-wye0lu .framer-OtDDP *,
+  div[data-framer-name="Nav items"] *,
+  nav a div,
+  nav a p {
+    color: #FFFFFF !important;
+    --framer-text-color: #FFFFFF !important;
+    font-weight: 500 !important;
+  }
+  .framer-wye0lu div[data-framer-name="Nav items"] a:hover *,
+  div[data-framer-name="Nav items"] a:hover * {
+    color: #F0BE55 !important;
+    --framer-text-color: #F0BE55 !important;
+  }
+
+  /* Navbar Right CTA Button ("Get in touch"): Solid Gold button with Navy text */
+  .framer-wye0lu a.framer-Xl5mj,
+  .framer-wye0lu .framer-Xl5mj,
+  a[data-framer-name="Line"].framer-Xl5mj,
+  div[data-framer-name="Navigation"] .framer-Xl5mj {
+    background: #D9A53A !important;
+    background-color: #D9A53A !important;
+    border-color: #D9A53A !important;
+    color: #FFFFFF !important;
+    box-shadow: none !important;
+    border-radius: 9999px !important;
+  }
+  .framer-wye0lu a.framer-Xl5mj *,
+  .framer-wye0lu .framer-Xl5mj *,
+  a[data-framer-name="Line"].framer-Xl5mj * {
+    color: #FFFFFF !important;
+    --framer-text-color: #FFFFFF !important;
+    font-weight: 600 !important;
+  }
+
+  /* =========================================================================
+     2. HERO: Navy 900 background, White text, Gold 400 highlights
+     ========================================================================= */
+  .framer-1npfag2,
+  div[data-framer-name="Hero"] {
+    background-color: #081838 !important;
+    background: #081838 !important;
+  }
+  .framer-1npfag2 h1,
+  .framer-1npfag2 h1 span,
+  div[data-framer-name="Hero"] h1,
+  div[data-framer-name="Hero"] h1 span,
+  .framer-u5gmvc h1,
+  .framer-u5gmvc h1 span {
+    color: #FFFFFF !important;
+    --framer-text-color: #FFFFFF !important;
+    text-shadow: none !important;
+    filter: none !important;
+    -webkit-filter: none !important;
+  }
+  .framer-1npfag2 p,
+  div[data-framer-name="Hero"] p {
+    color: #C7D0E0 !important;
+    --framer-text-color: #C7D0E0 !important;
+  }
+
+  /* Hero Video Cover: Neutral vignette, no yellow glow */
+  .framer-v4f04,
+  div[data-framer-name="Cover"] {
+    background: linear-gradient(180deg, rgba(8, 24, 56, 0) 50%, rgba(8, 24, 56, 0.8) 100%) !important;
+    box-shadow: none !important;
+    filter: none !important;
+  }
+
+  /* Keyword Highlights in Hero / Headings */
+  .framer-1npfag2 span[style*="2102cf31"],
+  .framer-styles-preset-hcmt7i span {
+    color: #F0BE55 !important;
+    --framer-text-color: #F0BE55 !important;
+  }
+
+  /* Hero CTA Primary Button ("Book Consultation") */
+  .framer-1npfag2 a[data-framer-name="Button"],
+  div[data-framer-name="Hero"] a[data-framer-name="Button"],
+  .framer-1473l0o {
+    background: #D9A53A !important;
+    background-color: #D9A53A !important;
+    color: #FFFFFF !important;
+    --framer-text-color: #FFFFFF !important;
+  }
+  .framer-1npfag2 a[data-framer-name="Button"] *,
+  div[data-framer-name="Hero"] a[data-framer-name="Button"] * {
+    color: #FFFFFF !important;
+    --framer-text-color: #FFFFFF !important;
+    font-weight: 600 !important;
+  }
+
+  /* Marquee / Ticker */
+  section[data-framer-name="Ticker"],
+  .framer-1bp8941 {
+    background-color: #081838 !important;
+    border-color: rgba(255, 255, 255, 0.12) !important;
+  }
+  section[data-framer-name="Ticker"] h3,
+  .framer-1bp8941 h3,
+  .framer-1bp8941 p {
+    color: #F0BE55 !important;
+    --framer-text-color: #F0BE55 !important;
+  }
+  .framer-1bp8941 .framer-w0S00 {
+    --43q7um: #F0BE55 !important;
+  }
+
+  /* =========================================================================
+     3. ABOUT INTRO & PILLARS (3 CARDS): Cream background, White cards, Navy text, Gold icons
+     ========================================================================= */
+  section[data-framer-name="About"],
+  .framer-1b000vb {
+    background-color: #F7F3E8 !important;
+    background: #F7F3E8 !important;
+  }
+  section[data-framer-name="About"] h2,
+  .framer-1b000vb h2,
+  .framer-styles-preset-hcmt7i {
+    color: #081838 !important;
+    --framer-text-color: #081838 !important;
+  }
+  section[data-framer-name="About"] p,
+  .framer-1b000vb p {
+    color: #4A5878 !important;
+    --framer-text-color: #4A5878 !important;
+  }
+
+  /* Eyebrow tag on light: Gold 700 (#8A5A06) */
+  section[data-framer-name="About"] div[data-framer-name="Tag"] p,
+  .framer-1b000vb div[data-framer-name="Tag"] p,
+  div[data-framer-name="Tag"] .framer-styles-preset-12qamiq {
+    color: #8A5A06 !important;
+    --framer-text-color: #8A5A06 !important;
+  }
+
+  /* Left & Right Cards (Clear Direction, Lasting Impact): White background, Navy 900 Title, Muted Body */
+  .framer-fXJ0H.framer-v-skq62g,
+  .framer-v-skq62g {
+    background-color: #FFFFFF !important;
+    background: #FFFFFF !important;
+    border: 1px solid #E3DCC8 !important;
+    box-shadow: 0 4px 20px rgba(8, 24, 56, 0.04) !important;
+  }
+  .framer-v-skq62g h4,
+  .framer-v-skq62g .framer-styles-preset-hpamux,
+  .framer-fXJ0H.framer-v-skq62g h4,
+  .framer-fXJ0H.framer-v-skq62g .framer-mrq0rq h4 {
+    color: #081838 !important;
+    --framer-text-color: #081838 !important;
+    font-weight: 700 !important;
+  }
+  .framer-v-skq62g p,
+  .framer-v-skq62g .framer-styles-preset-qlsyr3,
+  .framer-fXJ0H.framer-v-skq62g p,
+  .framer-fXJ0H.framer-v-skq62g .framer-mrq0rq p {
+    color: #4A5878 !important;
+    --framer-text-color: #4A5878 !important;
+    opacity: 1 !important;
+  }
+  .framer-v-skq62g svg,
+  .framer-fXJ0H.framer-v-skq62g svg {
+    --21h8s6: #8A5A06 !important;
+    color: #8A5A06 !important;
+  }
+
+  /* Middle Card (Practical Insight): Blue Photo background, Pure White text */
+  .framer-fXJ0H.framer-v-jjampd,
+  .framer-v-jjampd {
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  }
+  .framer-v-jjampd h4,
+  .framer-v-jjampd .framer-styles-preset-hpamux,
+  .framer-fXJ0H.framer-v-jjampd h4,
+  .framer-fXJ0H.framer-v-jjampd .framer-mrq0rq h4 {
+    color: #FFFFFF !important;
+    --framer-text-color: #FFFFFF !important;
+    font-weight: 700 !important;
+  }
+  .framer-v-jjampd p,
+  .framer-v-jjampd .framer-styles-preset-qlsyr3,
+  .framer-fXJ0H.framer-v-jjampd p,
+  .framer-fXJ0H.framer-v-jjampd .framer-mrq0rq p {
+    color: #FFFFFF !important;
+    --framer-text-color: #FFFFFF !important;
+    opacity: 0.95 !important;
+  }
+  /* Remove yellow mask over practical insight card */
+  .framer-v-jjampd div[data-framer-name="Mask"],
+  .framer-fXJ0H.framer-v-jjampd .framer-1a7jr6t {
+    background: linear-gradient(180deg, rgba(8, 24, 56, 0) 0%, rgba(8, 24, 56, 0.75) 100%) !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+
+  /* =========================================================================
+     4. SERVICES: Navy 900 background, Navy 800 cards, White & Muted text, Gold hover
+     ========================================================================= */
+  section[data-framer-name="Our Services"],
+  .framer-caa57t {
+    background-color: #081838 !important;
+    background: #081838 !important;
+  }
+  section[data-framer-name="Our Services"] h2,
+  .framer-caa57t h2 {
+    color: #FFFFFF !important;
+    --framer-text-color: #FFFFFF !important;
+  }
+  section[data-framer-name="Our Services"] div[data-framer-name="Tag"] p,
+  .framer-caa57t div[data-framer-name="Tag"] p {
+    color: #F0BE55 !important;
+    --framer-text-color: #F0BE55 !important;
+  }
+
+  /* Service Cards: Navy 800 */
+  .framer-uAvqu,
+  a[data-framer-name="Main"].framer-uAvqu {
+    background-color: #0C2250 !important;
+    background: #0C2250 !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  }
+  .framer-uAvqu h4 {
+    color: #FFFFFF !important;
+    --framer-text-color: #FFFFFF !important;
+  }
+  .framer-uAvqu p {
+    color: #C7D0E0 !important;
+    --framer-text-color: #C7D0E0 !important;
+  }
+  .framer-uAvqu .framer-113bfzf {
+    border-color: #173A78 !important;
+    background-color: rgba(23, 58, 120, 0.5) !important;
+  }
+  .framer-uAvqu .framer-113bfzf svg {
+    --21h8s6: #D9A53A !important;
+    color: #D9A53A !important;
+  }
+  /* Remove blur glow from services card mask */
+  .framer-uAvqu .framer-8643tc,
+  .framer-uAvqu div[data-framer-name="Mask"] {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    background: linear-gradient(180deg, rgba(12, 34, 80, 0) 0%, rgba(12, 34, 80, 0.95) 90%) !important;
+    mask: none !important;
+    -webkit-mask: none !important;
+  }
+  .framer-uAvqu .framer-qo2sg3 {
+    mask: none !important;
+    -webkit-mask: none !important;
+  }
+
+  /* =========================================================================
+     5. VALUES & WHY US: Navy 900 Section, Navy 800 Cards, White & Muted Text, Gold Accents
+     ========================================================================= */
+  .framer-1ml0xzm,
+  div[data-framer-name="Our Values"],
+  .framer-14flwu8,
+  .framer-1r75qix,
+  section[data-framer-name="Why us"],
+  section.framer-12plb68 {
+    background: #081838 !important;
+    background-color: #081838 !important;
+  }
+  .framer-1ml0xzm h2,
+  div[data-framer-name="Our Values"] h2,
+  section[data-framer-name="Why us"] h2,
+  section.framer-12plb68 h2,
+  .framer-styles-preset-9lpzun {
+    color: #FFFFFF !important;
+    --framer-text-color: #FFFFFF !important;
+  }
+  .framer-1ml0xzm p,
+  div[data-framer-name="Our Values"] p,
+  section[data-framer-name="Why us"] p,
+  section.framer-12plb68 p {
+    color: #C7D0E0 !important;
+    --framer-text-color: #C7D0E0 !important;
+  }
+  /* Eyebrow Tag on Navy Background: Gold 400 (#F0BE55) */
+  section[data-framer-name="Why us"] div[data-framer-name="Tag"] p,
+  section.framer-12plb68 div[data-framer-name="Tag"] p,
+  .framer-12plb68 .framer-1wkjsq4-container p {
+    color: #F0BE55 !important;
+    --framer-text-color: #F0BE55 !important;
+  }
+  section[data-framer-name="Why us"] .framer-2chx60,
+  section.framer-12plb68 .framer-2chx60 {
+    background-color: #F0BE55 !important;
+  }
+
+  /* Values Cards (Homepage): Navy 800 */
+  .framer-1ml0xzm .framer-1vczmkn,
+  div[data-framer-name="Our Values"] .framer-1vczmkn {
+    background-color: #0C2250 !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  }
+  .framer-1ml0xzm .framer-1vczmkn h3,
+  .framer-1ml0xzm .framer-1vczmkn h4,
+  div[data-framer-name="Our Values"] h4 {
+    color: #FFFFFF !important;
+    --framer-text-color: #FFFFFF !important;
+  }
+  /* Gold dots / numbers */
+  .framer-1ml0xzm svg,
+  div[data-framer-name="Our Values"] svg {
+    color: #D9A53A !important;
+    fill: #D9A53A !important;
+  }
+
+  /* Why Us Cards (about.html: Tailored Solutions, Commercial Perspective, etc.): Navy 800 Surface */
+  .framer-12plb68 .framer-FkMN3,
+  section[data-framer-name="Why us"] .framer-FkMN3,
+  .framer-FkMN3.framer-174ibio,
+  .framer-174ibio,
+  .framer-v-174ibio,
+  .framer-v-1o9r0jv {
+    background-color: #0C2250 !important;
+    background: #0C2250 !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    box-shadow: 0 8px 32px rgba(8, 24, 56, 0.4) !important;
+    border-radius: 22px !important;
+  }
+  .framer-12plb68 .framer-89mkba,
+  section[data-framer-name="Why us"] .framer-89mkba,
+  .framer-FkMN3 .framer-89mkba,
+  .framer-174ibio .framer-89mkba,
+  div[data-framer-name="Process Spacer"] .framer-89mkba {
+    background-color: #0C2250 !important;
+    background: #0C2250 !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+
+  /* Why Us Card Titles: Pure White (#FFFFFF) */
+  .framer-12plb68 .framer-FkMN3 h4,
+  section[data-framer-name="Why us"] .framer-FkMN3 h4,
+  .framer-12plb68 .framer-107plxr h4,
+  .framer-FkMN3 .framer-107plxr h4,
+  .framer-174ibio h4,
+  .framer-174ibio .framer-styles-preset-hpamux {
+    color: #FFFFFF !important;
+    --framer-text-color: #FFFFFF !important;
+    font-weight: 700 !important;
+  }
+
+  /* Why Us Card Descriptions: Muted Silver/Blue (#C7D0E0) */
+  .framer-12plb68 .framer-FkMN3 p,
+  section[data-framer-name="Why us"] .framer-FkMN3 p,
+  .framer-12plb68 .framer-1e30083 p,
+  .framer-FkMN3 .framer-1e30083 p,
+  .framer-174ibio p,
+  .framer-174ibio .framer-styles-preset-qlsyr3 {
+    color: #C7D0E0 !important;
+    --framer-text-color: #C7D0E0 !important;
+    opacity: 1 !important;
+  }
+
+  /* Why Us Card Icons: Navy 700 container with Gold 500 icon */
+  .framer-12plb68 .framer-ba5vjj,
+  section[data-framer-name="Why us"] .framer-ba5vjj,
+  .framer-FkMN3 .framer-ba5vjj {
+    background-color: rgba(23, 58, 120, 0.6) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    opacity: 1 !important;
+  }
+  .framer-12plb68 .framer-ba5vjj svg,
+  section[data-framer-name="Why us"] .framer-ba5vjj svg,
+  .framer-FkMN3 .framer-ba5vjj svg {
+    --21h8s6: #D9A53A !important;
+    color: #D9A53A !important;
+    stroke: #D9A53A !important;
+    fill: none !important;
+  }
+  .framer-12plb68 .framer-ba5vjj svg use,
+  section[data-framer-name="Why us"] .framer-ba5vjj svg use {
+    color: #D9A53A !important;
+    fill: #D9A53A !important;
+  }
+
+  /* Center CTA Button ("Book Consultation ↗"): Solid Gold 500 with Navy 900 Text */
+  .framer-12plb68 a.framer-Xl5mj,
+  section[data-framer-name="Why us"] a.framer-Xl5mj,
+  .framer-12plb68 .framer-yhbd3f,
+  section[data-framer-name="Why us"] .framer-yhbd3f {
+    background: #D9A53A !important;
+    background-color: #D9A53A !important;
+    border: none !important;
+    box-shadow: 0 4px 20px rgba(217, 165, 58, 0.3) !important;
+    border-radius: 9999px !important;
+  }
+  .framer-12plb68 a.framer-Xl5mj *,
+  section[data-framer-name="Why us"] a.framer-Xl5mj *,
+  .framer-12plb68 .framer-yhbd3f * {
+    color: #FFFFFF !important;
+    --framer-text-color: #FFFFFF !important;
+    font-weight: 700 !important;
+  }
+  .framer-12plb68 a.framer-Xl5mj .framer-f97dkt,
+  section[data-framer-name="Why us"] a.framer-Xl5mj .framer-f97dkt {
+    background-color: #FFFFFF !important;
+  }
+  .framer-12plb68 a.framer-Xl5mj .framer-f97dkt svg,
+  section[data-framer-name="Why us"] a.framer-Xl5mj .framer-f97dkt svg {
+    color: #081838 !important;
+    fill: #081838 !important;
+  }
+
+  /* =========================================================================
+     6. CASE STUDIES: White background, Navy text, Gold metric badges
+     ========================================================================= */
+  section[data-framer-name="Cases"],
+  .framer-1ly4xme {
+    background-color: #FFFFFF !important;
+    background: #FFFFFF !important;
+  }
+  section[data-framer-name="Cases"] h2,
+  .framer-1ly4xme h2 {
+    color: #081838 !important;
+    --framer-text-color: #081838 !important;
+  }
+  section[data-framer-name="Cases"] div[data-framer-name="Tag"] p,
+  .framer-1ly4xme div[data-framer-name="Tag"] p {
+    color: #8A5A06 !important;
+    --framer-text-color: #8A5A06 !important;
+  }
+  /* Case Study Cards */
+  .framer-1ly4xme h4,
+  .framer-5UXON h4,
+  .framer-enkd0c h4,
+  .framer-GEAno h4,
+  .framer-ux6344 h4 {
+    color: #081838 !important;
+    --framer-text-color: #081838 !important;
+  }
+  .framer-5UXON p,
+  .framer-enkd0c p {
+    color: #4A5878 !important;
+    --framer-text-color: #4A5878 !important;
+  }
+  /* Media Tags on Photos: White text on frosted tag */
+  .framer-1kxg8fp,
+  .framer-1kxg8fp p,
+  .framer-1lgk0hu,
+  .framer-1lgk0hu p,
+  .framer-styles-preset-115hxpd,
+  .framer-styles-preset-115hxpd p {
+    color: #FFFFFF !important;
+    --framer-text-color: #FFFFFF !important;
+  }
+  /* Metric badges */
+  .framer-1ly4xme .framer-1plp36s,
+  .framer-73w4iy {
+    background-color: #D9A53A !important;
+  }
+
+  /* =========================================================================
+     7. INDUSTRIES: Cream background, Navy text, Gold 700 accents
+     ========================================================================= */
+  .framer-19y4626,
+  div[data-framer-name="Industries"] {
+    background: #F7F3E8 !important;
+    background-color: #F7F3E8 !important;
+  }
+  .framer-19y4626 h2,
+  div[data-framer-name="Industries"] h2 {
+    color: #081838 !important;
+    --framer-text-color: #081838 !important;
+  }
+  .framer-19y4626 p,
+  div[data-framer-name="Industries"] p {
+    color: #4A5878 !important;
+    --framer-text-color: #4A5878 !important;
+  }
+  .framer-19y4626 div[data-framer-name="Tag"] p {
+    color: #8A5A06 !important;
+    --framer-text-color: #8A5A06 !important;
+  }
+
+  /* =========================================================================
+     8. TESTIMONIALS: Cream background, White cards, Navy text, Gold stars
+     ========================================================================= */
+  section[data-framer-name="Testimonials"],
+  .framer-1guxum3 {
+    background-color: #F7F3E8 !important;
+    background: #F7F3E8 !important;
+  }
+  section[data-framer-name="Testimonials"] h2,
+  .framer-1guxum3 h2 {
+    color: #081838 !important;
+    --framer-text-color: #081838 !important;
+  }
+  section[data-framer-name="Testimonials"] div[data-framer-name="Tag"] p,
+  .framer-1guxum3 div[data-framer-name="Tag"] p {
+    color: #8A5A06 !important;
+    --framer-text-color: #8A5A06 !important;
+  }
+  /* White cards */
+  .framer-1guxum3 .framer-wt1zt5,
+  .framer-wt1zt5 {
+    background-color: #FFFFFF !important;
+    border: 1px solid #E3DCC8 !important;
+    box-shadow: 0 4px 20px rgba(8, 24, 56, 0.04) !important;
+  }
+  .framer-1guxum3 .framer-5bkf53 p,
+  .framer-wt1zt5 .framer-5bkf53 p,
+  .framer-1guxum3 .framer-1tm13m8 p,
+  .framer-wt1zt5 .framer-1tm13m8 p {
+    color: #081838 !important;
+    --framer-text-color: #081838 !important;
+  }
+  .framer-1guxum3 .framer-eciddm p,
+  .framer-wt1zt5 .framer-eciddm p {
+    color: #4A5878 !important;
+    --framer-text-color: #4A5878 !important;
+  }
+  /* Gold stars */
+  .framer-1guxum3 .framer-hz0k8n svg path,
+  .framer-hz0k8n svg path {
+    fill: #D9A53A !important;
+    stroke: #D9A53A !important;
+  }
+
+  /* =========================================================================
+     9. APPROACH: Navy background, White Cards with Navy/Muted Text, Gold Accents
+     ========================================================================= */
+  section[data-framer-name="Our Approach"],
+  .framer-amq3p3 {
+    background-color: #0C2250 !important;
+    background: #0C2250 !important;
+  }
+  section[data-framer-name="Our Approach"] h2,
+  .framer-amq3p3 h2 {
+    color: #FFFFFF !important;
+    --framer-text-color: #FFFFFF !important;
+  }
+  section[data-framer-name="Our Approach"] div[data-framer-name="Tag"] p,
+  .framer-amq3p3 div[data-framer-name="Tag"] p {
+    color: #F0BE55 !important;
+    --framer-text-color: #F0BE55 !important;
+  }
+
+  /* Left Tabs (01 Understand, 02 Direction, 03 Progress) */
+  /* Active Tab Pill (White Background) */
+  .framer-V6wIU[style*="255, 255, 255"],
+  .framer-V6wIU[style*="rgb(255,255,255)"],
+  .framer-V6wIU[style*="#fff"],
+  .framer-V6wIU[style*="#FFF"],
+  .framer-V6wIU:not([data-framer-name="Disabled"]):not(.framer-v-1cha28u),
+  .framer-V6wIU[data-framer-name="Variant 1"],
+  .framer-V6wIU[data-framer-name="Active"] {
+    background-color: #FFFFFF !important;
+    background: #FFFFFF !important;
+    opacity: 1 !important;
+    box-shadow: 0 4px 14px rgba(8, 24, 56, 0.12) !important;
+  }
+
+  /* Active Pill - Step Number (01, 02, 03): Rich Gold 700 (#8A5A06) */
+  .framer-V6wIU[style*="255, 255, 255"] .framer-90x3vz p,
+  .framer-V6wIU[style*="rgb(255,255,255)"] .framer-90x3vz p,
+  .framer-V6wIU[style*="#fff"] .framer-90x3vz p,
+  .framer-V6wIU[style*="#FFF"] .framer-90x3vz p,
+  .framer-V6wIU:not([data-framer-name="Disabled"]):not(.framer-v-1cha28u) .framer-90x3vz p,
+  .framer-V6wIU[data-framer-name="Variant 1"] .framer-90x3vz p,
+  .framer-V6wIU[data-framer-name="Active"] .framer-90x3vz p {
+    color: #8A5A06 !important;
+    --framer-text-color: #8A5A06 !important;
+    font-weight: 700 !important;
+    opacity: 1 !important;
+  }
+
+  /* Active Pill - Label (Understand, Direction, Progress): Bold Navy 900 (#081838) */
+  .framer-V6wIU[style*="255, 255, 255"] .framer-63sh2d p,
+  .framer-V6wIU[style*="rgb(255,255,255)"] .framer-63sh2d p,
+  .framer-V6wIU[style*="#fff"] .framer-63sh2d p,
+  .framer-V6wIU[style*="#FFF"] .framer-63sh2d p,
+  .framer-V6wIU:not([data-framer-name="Disabled"]):not(.framer-v-1cha28u) .framer-63sh2d p,
+  .framer-V6wIU[data-framer-name="Variant 1"] .framer-63sh2d p,
+  .framer-V6wIU[data-framer-name="Active"] .framer-63sh2d p {
+    color: #081838 !important;
+    --framer-text-color: #081838 !important;
+    font-weight: 600 !important;
+    opacity: 1 !important;
+  }
+
+  /* Catch-all for any text inside active white pill */
+  .framer-V6wIU[style*="255, 255, 255"] p,
+  .framer-V6wIU[style*="rgb(255,255,255)"] p,
+  .framer-V6wIU[style*="#fff"] p,
+  .framer-V6wIU[style*="#FFF"] p,
+  .framer-V6wIU:not([data-framer-name="Disabled"]):not(.framer-v-1cha28u) p {
+    color: #081838 !important;
+    --framer-text-color: #081838 !important;
+  }
+
+  /* Inactive Tab (on Navy background) */
+  .framer-V6wIU[data-framer-name="Disabled"],
+  .framer-V6wIU.framer-v-1cha28u,
+  .framer-V6wIU[style*="rgba(0, 0, 0, 0)"],
+  .framer-V6wIU[style*="transparent"] {
+    background-color: transparent !important;
+    background: transparent !important;
+    opacity: 1 !important;
+  }
+
+  /* Inactive Tab - Step Number: Gold 400 (#F0BE55) */
+  .framer-V6wIU[data-framer-name="Disabled"] .framer-90x3vz p,
+  .framer-V6wIU.framer-v-1cha28u .framer-90x3vz p,
+  .framer-V6wIU[style*="rgba(0, 0, 0, 0)"] .framer-90x3vz p,
+  .framer-V6wIU[style*="transparent"] .framer-90x3vz p {
+    color: #F0BE55 !important;
+    --framer-text-color: #F0BE55 !important;
+    font-weight: 600 !important;
+    opacity: 1 !important;
+  }
+
+  /* Inactive Tab - Label: Muted Dark (#C7D0E0) */
+  .framer-V6wIU[data-framer-name="Disabled"] .framer-63sh2d p,
+  .framer-V6wIU.framer-v-1cha28u .framer-63sh2d p,
+  .framer-V6wIU[style*="rgba(0, 0, 0, 0)"] .framer-63sh2d p,
+  .framer-V6wIU[style*="transparent"] .framer-63sh2d p {
+    color: #C7D0E0 !important;
+    --framer-text-color: #C7D0E0 !important;
+    font-weight: 500 !important;
+    opacity: 1 !important;
+    transition: color 0.2s ease !important;
+  }
+
+  /* Inactive Tab - Hover: Pure White (#FFFFFF) */
+  .framer-V6wIU[data-framer-name="Disabled"]:hover .framer-63sh2d p,
+  .framer-V6wIU.framer-v-1cha28u:hover .framer-63sh2d p {
+    color: #FFFFFF !important;
+    --framer-text-color: #FFFFFF !important;
+  }
+
+  /* Right Cards (Heading and subtext) - White Surface */
+  .framer-iaxgtx,
+  div[data-framer-name="Heading and subtext"] {
+    background-color: #FFFFFF !important;
+    background: #FFFFFF !important;
+    border: 1px solid #E3DCC8 !important;
+    box-shadow: 0 4px 20px rgba(8, 24, 56, 0.05) !important;
+  }
+
+  /* Card Headings: Bold Navy 900 (#081838) */
+  .framer-iaxgtx h4,
+  div[data-framer-name="Heading and subtext"] h4,
+  .framer-iaxgtx .framer-styles-preset-hpamux,
+  div[data-framer-name="Heading and subtext"] .framer-styles-preset-hpamux,
+  .framer-iaxgtx .framer-1l62bih h4,
+  div[data-framer-name="Heading and subtext"] .framer-1l62bih h4,
+  .framer-tjWP0 .framer-iaxgtx h4 {
+    color: #081838 !important;
+    --framer-text-color: #081838 !important;
+    font-weight: 700 !important;
+    opacity: 1 !important;
+  }
+
+  /* Card Body Text Container Opacity Override (removes inline opacity:0.75) */
+  .framer-iaxgtx .framer-n5b5i9,
+  div[data-framer-name="Heading and subtext"] .framer-n5b5i9 {
+    opacity: 1 !important;
+  }
+
+  /* Card Body Text: High-Contrast Muted Dark (#4A5878) */
+  .framer-iaxgtx p,
+  div[data-framer-name="Heading and subtext"] p,
+  .framer-iaxgtx .framer-styles-preset-qlsyr3,
+  div[data-framer-name="Heading and subtext"] .framer-styles-preset-qlsyr3,
+  .framer-iaxgtx .framer-n5b5i9 p,
+  div[data-framer-name="Heading and subtext"] .framer-n5b5i9 p,
+  .framer-tjWP0 .framer-iaxgtx p {
+    color: #4A5878 !important;
+    --framer-text-color: #4A5878 !important;
+    opacity: 1 !important;
+    font-weight: 450 !important;
+    line-height: 1.6 !important;
+  }
+
+  /* Card Icons: Gold 500 (#D9A53A) */
+  .framer-iaxgtx svg,
+  div[data-framer-name="Heading and subtext"] svg,
+  .framer-iaxgtx .framer-r76qei svg,
+  div[data-framer-name="Heading and subtext"] .framer-r76qei svg,
+  .framer-tjWP0 .framer-iaxgtx svg {
+    color: #D9A53A !important;
+    fill: #D9A53A !important;
+    stroke: #D9A53A !important;
+    --21h8s6: #D9A53A !important;
+  }
+  .framer-iaxgtx svg use,
+  div[data-framer-name="Heading and subtext"] svg use,
+  .framer-tjWP0 .framer-iaxgtx svg use {
+    color: #D9A53A !important;
+    fill: #D9A53A !important;
+  }
+
+  /* =========================================================================
+     10. COMPARISON ("Why Businesses Choose Career Nova Today" / THE DIFFERENCE)
+     ========================================================================= */
+  .framer-7t69tj,
+  section[data-framer-name="Comparison"] {
+    background: #F7F3E8 !important;
+    background-color: #F7F3E8 !important;
+  }
+
+  /* Eyebrow Tag ("THE DIFFERENCE") */
+  .framer-7t69tj div[data-framer-name="Tag"] p,
+  section[data-framer-name="Comparison"] div[data-framer-name="Tag"] p,
+  .framer-7t69tj .framer-12qamiq,
+  section[data-framer-name="Comparison"] .framer-12qamiq,
+  .framer-7t69tj .framer-g1quql p,
+  section[data-framer-name="Comparison"] .framer-g1quql p {
+    color: #8A5A06 !important;
+    --framer-text-color: #8A5A06 !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.08em !important;
+  }
+
+  /* Main Headline ("Why Businesses Choose Career Nova Today") */
+  .framer-7t69tj h2,
+  section[data-framer-name="Comparison"] h2,
+  .framer-7t69tj h2 *,
+  section[data-framer-name="Comparison"] h2 *,
+  .framer-7t69tj h2 span,
+  section[data-framer-name="Comparison"] h2 span,
+  .framer-7t69tj .framer-c6niz4 h2,
+  section[data-framer-name="Comparison"] .framer-c6niz4 h2,
+  .framer-7t69tj .framer-c6niz4 h2 span,
+  section[data-framer-name="Comparison"] .framer-c6niz4 h2 span,
+  .framer-7t69tj .framer-styles-preset-hcmt7i,
+  section[data-framer-name="Comparison"] .framer-styles-preset-hcmt7i,
+  .framer-7t69tj .framer-styles-preset-hcmt7i span,
+  section[data-framer-name="Comparison"] .framer-styles-preset-hcmt7i span {
+    color: #081838 !important;
+    --framer-text-color: #081838 !important;
+    font-weight: 700 !important;
+    opacity: 1 !important;
+  }
+
+  /* Column Titles ("Other Firms", "With Us") */
+  .framer-7t69tj h4,
+  section[data-framer-name="Comparison"] h4,
+  .framer-7t69tj .framer-r2qiav h4,
+  section[data-framer-name="Comparison"] .framer-r2qiav h4,
+  .framer-7t69tj .framer-styles-preset-4trj8p,
+  section[data-framer-name="Comparison"] .framer-styles-preset-4trj8p {
+    color: #081838 !important;
+    --framer-text-color: #081838 !important;
+    font-weight: 700 !important;
+    opacity: 1 !important;
+  }
+
+  /* Column Subtitles ("Many consulting engagements deliver...", "We combine strategic expertise...") */
+  .framer-7t69tj .framer-ihmaxm p,
+  section[data-framer-name="Comparison"] .framer-ihmaxm p,
+  .framer-7t69tj .framer-ihmaxm,
+  section[data-framer-name="Comparison"] .framer-ihmaxm {
+    color: #4A5878 !important;
+    --framer-text-color: #4A5878 !important;
+    opacity: 1 !important;
+    font-weight: 450 !important;
+    line-height: 1.5 !important;
+  }
+
+  /* Checklist Row Items */
+  .framer-7t69tj .framer-4cn4px p,
+  section[data-framer-name="Comparison"] .framer-4cn4px p,
+  .framer-7t69tj .framer-styles-preset-1bsm36g,
+  section[data-framer-name="Comparison"] .framer-styles-preset-1bsm36g,
+  .framer-7t69tj .framer-kz4cg9 p,
+  section[data-framer-name="Comparison"] .framer-kz4cg9 p {
+    color: #081838 !important;
+    --framer-text-color: #081838 !important;
+    font-weight: 500 !important;
+    opacity: 1 !important;
+  }
+
+  /* Column 1 Checklist Icons (Other Firms: Muted Slate #6B7A99) */
+  .framer-7t69tj .framer-v-1afh44h svg,
+  section[data-framer-name="Comparison"] .framer-v-1afh44h svg {
+    color: #6B7A99 !important;
+    fill: #6B7A99 !important;
+    stroke: #6B7A99 !important;
+    --21h8s6: #6B7A99 !important;
+  }
+  .framer-7t69tj .framer-v-1afh44h svg use,
+  section[data-framer-name="Comparison"] .framer-v-1afh44h svg use {
+    color: #6B7A99 !important;
+    fill: #6B7A99 !important;
+  }
+
+  /* Column 2 Checklist Icons (With Us: Rich Gold #D9A53A) */
+  .framer-7t69tj .framer-kz4cg9 svg,
+  section[data-framer-name="Comparison"] .framer-kz4cg9 svg {
+    color: #D9A53A !important;
+    fill: #D9A53A !important;
+    stroke: #D9A53A !important;
+    --21h8s6: #D9A53A !important;
+  }
+  .framer-7t69tj .framer-kz4cg9 svg use,
+  section[data-framer-name="Comparison"] .framer-kz4cg9 svg use {
+    color: #D9A53A !important;
+    fill: #D9A53A !important;
+  }
+
+  /* Subtle card container borders on cream */
+  .framer-7t69tj .framer-bW07m,
+  section[data-framer-name="Comparison"] .framer-bW07m {
+    border-color: rgba(8, 24, 56, 0.12) !important;
+    background-color: rgba(255, 255, 255, 0.5) !important;
+  }
+  .framer-7t69tj .framer-w0fdz1,
+  section[data-framer-name="Comparison"] .framer-w0fdz1 {
+    border-color: rgba(8, 24, 56, 0.1) !important;
+  }
+
+  /* =========================================================================
+     11. FAQ: White background, Navy text, Gold 700 accents
+     ========================================================================= */
+  section[data-framer-name="FAQs"],
+  .framer-m3u4uj {
+    background-color: #FFFFFF !important;
+    background: #FFFFFF !important;
+  }
+  section[data-framer-name="FAQs"] h2,
+  .framer-m3u4uj h2 {
+    color: #081838 !important;
+    --framer-text-color: #081838 !important;
+  }
+  .framer-uwXTV,
+  .framer-uwXTV h4 {
+    color: #081838 !important;
+    --framer-text-color: #081838 !important;
+  }
+  .framer-uwXTV p {
+    color: #4A5878 !important;
+    --framer-text-color: #4A5878 !important;
+  }
+  .framer-uwXTV svg {
+    color: #8A5A06 !important;
+  }
+
+  /* =========================================================================
+     12. CTA BANNER & FOOTER: Navy 900, White & Muted text, NO highlight blocks on links
+     ========================================================================= */
+  section[name="Footer"],
+  div[data-framer-name="Footer"] {
+    background: #081838 !important;
+    background-color: #081838 !important;
+  }
+  section[name="Footer"] h2,
+  div[data-framer-name="Footer"] h2,
+  section[name="Footer"] h3 {
+    color: #FFFFFF !important;
+    --framer-text-color: #FFFFFF !important;
+  }
+  section[name="Footer"] p,
+  div[data-framer-name="Footer"] p {
+    color: #C7D0E0 !important;
+    --framer-text-color: #C7D0E0 !important;
+  }
+
+  /* Footer links: CLEAN TRANSPARENT, NO HIGHLIGHTS */
+  section[name="Footer"] a,
+  div[data-framer-name="Footer"] a,
+  section[name="Footer"] .framer-OtDDP,
+  div[data-framer-name="Footer"] .framer-OtDDP,
+  .framer-OtDDP.framer-v-c0et46 {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+  section[name="Footer"] a *,
+  div[data-framer-name="Footer"] a *,
+  .framer-OtDDP.framer-v-c0et46 * {
+    color: #C7D0E0 !important;
+    --framer-text-color: #C7D0E0 !important;
+  }
+  section[name="Footer"] a:hover *,
+  div[data-framer-name="Footer"] a:hover * {
+    color: #F0BE55 !important;
+    --framer-text-color: #F0BE55 !important;
+  }
+
+  /* Made by KodenCore attribution */
+  a[href*="kodencore.com"],
+  a[href*="kodencore.com"] * {
+    background: transparent !important;
+    background-color: transparent !important;
+    color: #C7D0E0 !important;
+    --framer-text-color: #C7D0E0 !important;
+  }
+  a[href*="kodencore.com"]:hover * {
+    color: #F0BE55 !important;
+    --framer-text-color: #F0BE55 !important;
+  }
+
+  /* Footer CTA Action Button (if any) */
+  section[name="Footer"] a[data-framer-name="Button"],
+  div[data-framer-name="Footer"] a[data-framer-name="Button"] {
+    background-color: #D9A53A !important;
+    color: #FFFFFF !important;
+  }
+  section[name="Footer"] a[data-framer-name="Button"] * {
+    color: #FFFFFF !important;
+    --framer-text-color: #FFFFFF !important;
+  }
+
+  /* Footer border line */
+  .framer-pwj5jx,
+  .framer-1bzcv6h {
+    border-color: rgba(255, 255, 255, 0.12) !important;
+  }
+
+  /* =========================================================================
+     13. SUBPAGE CONTENT & FORMS: Light/Cream Background, Navy 900 Text & Headings
+     ========================================================================= */
+  /* Main Subpage Content Sections */
+  section.framer-1wqgsg,
+  section[data-framer-name="Services"],
+  section.framer-9lota0,
+  section.framer-1te3tra,
+  section.framer-kb1bdu,
+  section.framer-11u3v8q,
+  .framer-18mddwb,
+  .framer-na8ixj,
+  .framer-1365eef,
+  .framer-14qgh26 {
+    background-color: #F7F3E8 !important;
+  }
+
+  /* Headings on Subpages and Light Sections: Navy 900 (#081838) */
+  section.framer-1wqgsg h2,
+  section.framer-1wqgsg h3,
+  section.framer-1wqgsg h4,
+  section[data-framer-name="Services"] h2,
+  section[data-framer-name="Services"] h3,
+  section.framer-9lota0 h2,
+  section.framer-9lota0 h3,
+  section.framer-1te3tra h2,
+  section.framer-1te3tra h3,
+  section.framer-kb1bdu h2,
+  section.framer-kb1bdu h3,
+  .framer-styles-preset-1wyoo49,
+  .framer-styles-preset-1w6vovl,
+  .framer-18mddwb h2,
+  .framer-18mddwb h3,
+  .framer-f1kgra h2,
+  .framer-17zc3ri h2 {
+    color: #081838 !important;
+    --framer-text-color: #081838 !important;
+  }
+
+  /* Body Copy, Paragraphs, Lists on Subpages: Muted Dark (#4A5878) */
+  section.framer-1wqgsg p,
+  section.framer-1wqgsg li,
+  section.framer-1wqgsg ul,
+  section[data-framer-name="Services"] p,
+  section[data-framer-name="Services"] li,
+  section.framer-9lota0 p,
+  section.framer-9lota0 li,
+  section.framer-1te3tra p,
+  section.framer-1te3tra li,
+  section.framer-kb1bdu p,
+  section.framer-kb1bdu li,
+  .framer-styles-preset-1bsm36g,
+  .framer-18mddwb p,
+  .framer-f1kgra p,
+  .framer-17zc3ri p {
+    color: #4A5878 !important;
+    --framer-text-color: #4A5878 !important;
+  }
+
+  /* Subpage Inquiry & Contact Form Containers (White Card on Light Section) */
+  .framer-1fe5dgd,
+  .framer-1c9xq7x,
+  div[data-framer-name="Services"] .framer-1fe5dgd,
+  section.framer-kb1bdu .framer-1c9xq7x {
+    background-color: #FFFFFF !important;
+    border-radius: 20px !important;
+    border: 1px solid #E3DCC8 !important;
+    box-shadow: 0 4px 24px rgba(8, 24, 56, 0.06) !important;
+  }
+
+  /* Subpage Form Field Labels */
+  .framer-1fe5dgd .framer-136gzpl p,
+  .framer-1fe5dgd .framer-969nzc p,
+  .framer-1fe5dgd .framer-o9x973 p,
+  .framer-1fe5dgd .framer-hiv185 p,
+  .framer-1fe5dgd .framer-3sv4u5 p,
+  .framer-1fe5dgd .framer-10k9jmu p,
+  .framer-1fe5dgd p.framer-styles-preset-1xheykw,
+  .framer-1fe5dgd p.framer-styles-preset-ar7l3c,
+  .framer-1c9xq7x p.framer-styles-preset-1xheykw,
+  .framer-1c9xq7x p.framer-styles-preset-ar7l3c,
+  .framer-1fe5dgd label p,
+  .framer-1c9xq7x label p {
+    color: #081838 !important;
+    --framer-text-color: #081838 !important;
+    font-weight: 600 !important;
+  }
+
+  /* Subpage Form Input Fields & Selects */
+  .framer-1fe5dgd input,
+  .framer-1fe5dgd textarea,
+  .framer-1fe5dgd select,
+  .framer-1c9xq7x input,
+  .framer-1c9xq7x textarea,
+  .framer-1c9xq7x select {
+    color: #081838 !important;
+    --framer-text-color: #081838 !important;
+    background-color: #FFFFFF !important;
+    border: 1px solid #E3DCC8 !important;
+    border-radius: 12px !important;
+  }
+  .framer-1fe5dgd input::placeholder,
+  .framer-1fe5dgd textarea::placeholder,
+  .framer-1c9xq7x input::placeholder,
+  .framer-1c9xq7x textarea::placeholder {
+    color: #8A98B0 !important;
+  }
+
+  /* Subpage Form Submit Buttons */
+  .framer-1fe5dgd button[type="submit"],
+  .framer-1c9xq7x button[type="submit"],
+  .framer-1shwfl button {
+    background-color: #D9A53A !important;
+    background: #D9A53A !important;
+    border: none !important;
+    border-radius: 14px !important;
+  }
+  .framer-1fe5dgd button[type="submit"] *,
+  .framer-1c9xq7x button[type="submit"] *,
+  .framer-1shwfl button * {
+    color: #FFFFFF !important;
+    --framer-text-color: #FFFFFF !important;
+    font-weight: 700 !important;
+  }
+
+  /* =========================================================================
+     14. FOOTER NEWSLETTER / MAILBOX: Seamless Dark Input, Transparent Container
+     ========================================================================= */
+  .framer-1dc3u87,
+  div[data-framer-name="Left Content"] .framer-1dc3u87,
+  .framer-1qkkozq .framer-1dc3u87,
+  form.framer-1xyvegf {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+  }
+
+  /* Mailbox Input Bar (Navy 800 Surface with Subtle Border on Dark Footer) */
+  form.framer-1xyvegf .framer-zo9e2a,
+  form.framer-1xyvegf .framer-form-text-input,
+  form.framer-1xyvegf .framer-9sdsy9 {
+    background: #0C2250 !important;
+    background-color: #0C2250 !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    border-radius: 14px !important;
+    box-shadow: none !important;
+  }
+
+  /* Mailbox Input Field */
+  form.framer-1xyvegf input,
+  form.framer-1xyvegf input[type="email"],
+  .framer-9sdsy9 input {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    color: #FFFFFF !important;
+    --framer-text-color: #FFFFFF !important;
+    font-size: 14px !important;
+    box-shadow: none !important;
+  }
+  form.framer-1xyvegf input::placeholder,
+  .framer-9sdsy9 input::placeholder {
+    color: #8A98B0 !important;
+    --framer-text-color: #8A98B0 !important;
+    opacity: 0.85 !important;
+  }
+
+  /* Mailbox Submit Arrow Button: Gold 500 (#D9A53A) with Navy Arrow */
+  form.framer-1xyvegf button,
+  form.framer-1xyvegf .framer-rRR1t,
+  form.framer-1xyvegf .framer-1utsz6q,
+  .framer-1rrchm8-container button,
+  .framer-1rrchm8-container .framer-1utsz6q {
+    background: #D9A53A !important;
+    background-color: #D9A53A !important;
+    border: none !important;
+    border-radius: 12px !important;
+    box-shadow: 0 2px 10px rgba(217, 165, 58, 0.25) !important;
+  }
+  form.framer-1xyvegf button:hover,
+  .framer-1rrchm8-container button:hover {
+    background: #F0BE55 !important;
+    background-color: #F0BE55 !important;
+  }
+  form.framer-1xyvegf svg,
+  form.framer-1xyvegf svg use,
+  .framer-1rrchm8-container svg,
+  .framer-1rrchm8-container svg use {
+    color: #081838 !important;
+    stroke: #081838 !important;
+    fill: #081838 !important;
+    --34440n: #081838 !important;
+  }
+
+  /* "Your data is handled with discretion" text below mailbox */
+  .framer-8aofjd,
+  .framer-8aofjd p,
+  div[data-framer-name="Left Content"] .framer-styles-preset-115hxpd,
+  div[data-framer-name="Left Content"] .framer-styles-preset-115hxpd p {
+    color: #8A98B0 !important;
+    --framer-text-color: #8A98B0 !important;
+    background: transparent !important;
+    background-color: transparent !important;
+  }
+
+
+  /* =========================================================================
+     CAREER NOVA DEFINITIVE ZERO-BLUR NAVBAR & HERO
+     ========================================================================= */
+  .framer-1vs21cr-container,
+  div[data-framer-appear-id="1vs21cr"] {
+    position: fixed !important;
+    top: 0px !important;
+    left: 50% !important;
+    width: 100% !important;
+    z-index: 9999 !important;
+    opacity: 1 !important;
+    transform: translateX(-50%) translateY(0px) !important;
+    visibility: visible !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+
+  .framer-1vs21cr-container nav,
+  .framer-AsZ1t,
+  nav.framer-AsZ1t,
+  nav[data-framer-name="Desktop navigation"],
+  nav[data-framer-name="Mobile"] {
+    background: transparent !important;
+    background-color: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    box-shadow: none !important;
+    border: none !important;
+    width: 100% !important;
+  }
+
+  /* Full-width transparent container - ABSOLUTELY NO BLUR */
+  .framer-wye0lu {
+    background: transparent !important;
+    background-color: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    margin: 0 auto !important;
+    padding: 14px 32px 16px !important;
+    max-width: 1300px !important;
+    width: 100% !important;
+  }
+
+  @media (max-width: 809.98px) {
+    .framer-wye0lu {
+      padding: 12px 20px 14px !important;
+    }
+  }
+
+  /* Remove ALL backdrop-filter and blurs inside the entire header */
+  .framer-1vs21cr-container *,
+  .framer-AsZ1t *,
+  .framer-wye0lu *,
+  nav * {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+
+  /* Desktop Nav Links (Services, Case Studies, Pricing, About, Blog) */
+  .framer-wye0lu div[data-framer-name="Nav items"] a,
+  .framer-wye0lu .framer-OtDDP,
+  div[data-framer-name="Nav items"] a {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+  .framer-wye0lu div[data-framer-name="Nav items"] p,
+  div[data-framer-name="Nav items"] p {
+    color: #FFFFFF !important;
+    --framer-text-color: #FFFFFF !important;
+    font-weight: 500 !important;
+    text-shadow: none !important;
+    transition: color 0.2s ease !important;
+  }
+  .framer-wye0lu div[data-framer-name="Nav items"] a:hover p,
+  div[data-framer-name="Nav items"] a:hover p {
+    color: #F0BE55 !important;
+    --framer-text-color: #F0BE55 !important;
+  }
+
+  /* Right CTA Button ("Get in touch") */
+  .framer-wye0lu div[data-framer-name="Button"] a,
+  .framer-rkuqdx-container a,
+  .framer-Xl5mj.framer-yhbd3f {
+    background: #D9A53A !important;
+    background-color: #D9A53A !important;
+    border-radius: 9999px !important;
+    border: none !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    transition: transform 0.2s ease, background 0.2s ease !important;
+  }
+  .framer-wye0lu div[data-framer-name="Button"] a:hover {
+    background: #F0BE55 !important;
+    background-color: #F0BE55 !important;
+    transform: scale(1.03) !important;
+  }
+  .framer-wye0lu div[data-framer-name="Button"] p,
+  .framer-rkuqdx-container p {
+    color: #FFFFFF !important;
+    --framer-text-color: #FFFFFF !important;
+    font-weight: 600 !important;
+    text-shadow: none !important;
+  }
+
+  /* Official Career Nova Emblem Logo - ZERO BLUR, SHARP & CRISP */
+  .framer-UXcol,
+  a.framer-UXcol,
+  .framer-4yblnf a,
+  div[data-framer-name="Brand logo"] a {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    text-decoration: none !important;
+    position: relative !important;
+    width: auto !important;
+    min-width: 60px !important;
+    height: 48px !important;
+    cursor: pointer !important;
+    overflow: visible !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    filter: none !important;
+    -webkit-filter: none !important;
+  }
+
+  .career-nova-nav-logo,
+  img.career-nova-nav-logo {
+    height: 48px !important;
+    width: auto !important;
+    max-height: 48px !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    object-fit: contain !important;
+    filter: none !important;
+    -webkit-filter: none !important;
+    box-shadow: none !important;
+    transition: transform 0.2s ease, opacity 0.2s ease !important;
+    pointer-events: auto !important;
+  }
+
+  .framer-UXcol:hover .career-nova-nav-logo,
+  a.framer-UXcol:hover .career-nova-nav-logo {
+    transform: scale(1.06) !important;
+    opacity: 0.95 !important;
+  }
+
+  /* Mobile logo size */
+  .framer-v-1bki9lt .career-nova-nav-logo,
+  .framer-UXcol.framer-v-1bki9lt .career-nova-nav-logo {
+    height: 38px !important;
+    max-height: 38px !important;
+  }
+
+  /* Hide old wordmark and old SVG vector */
+  .framer-UXcol .framer-9zt0xg,
+  .framer-UXcol h5,
+  .framer-UXcol .framer-nqrwck {
+    display: none !important;
+    visibility: hidden !important;
+  }
+
+  /* Full-width transparent container as in original Framer template */
+  .framer-wye0lu {
+    background: transparent !important;
+    background-color: transparent !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    margin: 0 auto !important;
+    padding: 14px 32px 16px !important;
+    max-width: 1300px !important;
+    width: 100% !important;
+  }
+
+  @media (max-width: 809.98px) {
+    .framer-wye0lu {
+      padding: 12px 20px 14px !important;
+    }
+  }
+
+  /* Desktop Nav Links (Services, Case Studies, Pricing, About, Blog) */
+  .framer-wye0lu div[data-framer-name="Nav items"] a,
+  .framer-wye0lu .framer-OtDDP,
+  div[data-framer-name="Nav items"] a {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+  .framer-wye0lu div[data-framer-name="Nav items"] p,
+  div[data-framer-name="Nav items"] p {
+    color: #FFFFFF !important;
+    --framer-text-color: #FFFFFF !important;
+    font-weight: 500 !important;
+    text-shadow: none !important;
+    transition: color 0.2s ease !important;
+  }
+  .framer-wye0lu div[data-framer-name="Nav items"] a:hover p,
+  div[data-framer-name="Nav items"] a:hover p {
+    color: #F0BE55 !important;
+    --framer-text-color: #F0BE55 !important;
+  }
+
+  /* Right CTA Button ("Get in touch") */
+  .framer-wye0lu div[data-framer-name="Button"] a,
+  .framer-rkuqdx-container a,
+  .framer-Xl5mj.framer-yhbd3f {
+    background: #D9A53A !important;
+    background-color: #D9A53A !important;
+    border-radius: 9999px !important;
+    border: none !important;
+    box-shadow: none !important;
+    transition: transform 0.2s ease, background 0.2s ease !important;
+  }
+  .framer-wye0lu div[data-framer-name="Button"] a:hover {
+    background: #F0BE55 !important;
+    background-color: #F0BE55 !important;
+    transform: scale(1.03) !important;
+  }
+  .framer-wye0lu div[data-framer-name="Button"] p,
+  .framer-rkuqdx-container p {
+    color: #FFFFFF !important;
+    --framer-text-color: #FFFFFF !important;
+    font-weight: 600 !important;
+    text-shadow: none !important;
+  }
+
+  /* Official Career Nova Emblem Logo */
+  .framer-UXcol,
+  a.framer-UXcol,
+  .framer-4yblnf a,
+  div[data-framer-name="Brand logo"] a {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    text-decoration: none !important;
+    position: relative !important;
+    width: auto !important;
+    min-width: 60px !important;
+    height: 48px !important;
+    cursor: pointer !important;
+    overflow: visible !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  .career-nova-nav-logo,
+  img.career-nova-nav-logo {
+    height: 48px !important;
+    width: auto !important;
+    max-height: 48px !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    object-fit: contain !important;
+    filter: none !important; !important;
+    transition: transform 0.2s ease, opacity 0.2s ease !important;
+    pointer-events: auto !important;
+  }
+
+  .framer-UXcol:hover .career-nova-nav-logo,
+  a.framer-UXcol:hover .career-nova-nav-logo {
+    transform: scale(1.06) !important;
+    opacity: 0.95 !important;
+  }
+
+  /* Mobile logo size */
+  .framer-v-1bki9lt .career-nova-nav-logo,
+  .framer-UXcol.framer-v-1bki9lt .career-nova-nav-logo {
+    height: 38px !important;
+    max-height: 38px !important;
+  }
+
+  /* Hide ONLY the old wordmark and old SVG vector */
+  .framer-UXcol .framer-9zt0xg,
+  .framer-UXcol h5,
+  .framer-UXcol .framer-nqrwck {
+    display: none !important;
+    visibility: hidden !important;
+  }
+
+
+
+
+  
+  
+
+
+  /* Complete Shadow Removal from Entire Nav Bar */
+  .framer-1vs21cr-container,
+  .framer-AsZ1t,
+  .framer-wye0lu,
+  div[data-framer-name="Desktop navigation"],
+  div[data-framer-name="Container"],
+  .framer-wye0lu div[data-framer-name="Nav items"] p,
+  div[data-framer-name="Nav items"] p,
+  .framer-wye0lu div[data-framer-name="Button"] a,
+  .framer-rkuqdx-container a,
+  .career-nova-nav-logo,
+  img.career-nova-nav-logo {
+    box-shadow: none !important;
+    text-shadow: none !important;
+    filter: none !important;
+    -webkit-filter: none !important;
+  }
+
+
+  
+  
+
+
+  
+
+  section[data-framer-name="Comparison"] .framer-1yl1a90 p,
+  section[data-framer-name="Comparison"] .framer-1yl1a90 *,
+  .framer-7t69tj .framer-1yl1a90 p,
+  .framer-7t69tj .framer-1yl1a90 *,
+  .framer-1r75qix .framer-1yl1a90 p,
+  .framer-1r75qix .framer-1yl1a90 *,
+  .framer-1yl1a90 p,
+  .framer-1yl1a90 * {
+    color: #081838 !important;
+    --framer-text-color: #081838 !important;
+    font-weight: 500 !important;
+    opacity: 1 !important;
+  }
+
+  /* Dividers between metrics */
+  section[data-framer-name="Comparison"] .framer-I9tjZ,
+  .framer-7t69tj .framer-I9tjZ,
+  .framer-1r75qix .framer-I9tjZ,
+  .framer-I9tjZ {
+    --border-color: rgba(8, 24, 56, 0.12) !important;
+    border-color: rgba(8, 24, 56, 0.12) !important;
+  }
+
+
+  /* =========================================================================
+     UNIVERSAL BUTTON ALIGNMENT & WHITE TEXT OVER GOLD BACKGROUND
+     Fixes:
+     - Text overflow & misalignment on pill edges ("View all services")
+     - Sets button text color strictly to Pure White (#FFFFFF)
+     - Ensures proper flex alignment, padding, and arrow icon color
+     ========================================================================= */
+  .framer-Xl5mj,
+  .framer-yhbd3f,
+  a[data-framer-name="Line"],
+  a[data-framer-name="Simple"],
+  a[data-framer-name="Simple arrow"],
+  a[data-framer-name="Button"],
+  div[data-framer-name="Button"] a,
+  .framer-rkuqdx-container a,
+  .framer-wye0lu a,
+  .framer-12plb68 a,
+  section[data-framer-name="Why us"] a.framer-Xl5mj,
+  button[type="submit"],
+  .framer-1fe5dgd button,
+  .framer-1c9xq7x button,
+  .framer-1shwfl button,
+  .framer-1xyvegf button,
+  .framer-1473l0o button,
+  form button {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+    background: #D9A53A !important;
+    background-color: #D9A53A !important;
+    color: #FFFFFF !important;
+    --framer-text-color: #FFFFFF !important;
+    text-decoration: none !important;
+    border-radius: 9999px !important;
+  }
+
+  /* All text inside any button variant -> Pure White (#FFFFFF) */
+  .framer-Xl5mj *,
+  .framer-yhbd3f *,
+  a[data-framer-name="Line"] *,
+  a[data-framer-name="Simple"] *,
+  a[data-framer-name="Simple arrow"] *,
+  a[data-framer-name="Button"] *,
+  div[data-framer-name="Button"] a *,
+  .framer-rkuqdx-container a *,
+  .framer-wye0lu a *,
+  .framer-12plb68 a *,
+  section[data-framer-name="Why us"] a.framer-Xl5mj *,
+  button[type="submit"] *,
+  .framer-1fe5dgd button *,
+  .framer-1c9xq7x button *,
+  .framer-1shwfl button *,
+  .framer-1xyvegf button *,
+  .framer-1473l0o button *,
+  form button * {
+    color: #FFFFFF !important;
+    --framer-text-color: #FFFFFF !important;
+    font-weight: 600 !important;
+    text-shadow: none !important;
+  }
+
+  /* Specific padding & flex alignment for "View all services" (.framer-v-1uc1f7v) */
+  .framer-Xl5mj.framer-v-1uc1f7v,
+  .framer-v-1uc1f7v.framer-39xvlj,
+  a[data-framer-name="Simple arrow"] {
+    padding: 10px 22px 10px 24px !important;
+    gap: 8px !important;
+    width: auto !important;
+    min-width: max-content !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  /* Clip rollover duplicate text strictly to 23px height so only one line displays */
+  .framer-Xl5mj .framer-17hpsvh,
+  .framer-Xl5mj.framer-v-1uc1f7v .framer-17hpsvh,
+  .framer-v-1uc1f7v .framer-17hpsvh,
+  .framer-17hpsvh {
+    height: 23px !important;
+    max-height: 23px !important;
+    overflow: hidden !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    position: relative !important;
+    width: auto !important;
+  }
+
+  .framer-17hpsvh .framer-n434ag,
+  .framer-17hpsvh .framer-g7muo8 {
+    height: 23px !important;
+    line-height: 23px !important;
+    display: flex !important;
+    align-items: center !important;
+    white-space: nowrap !important;
+  }
+
+  .framer-17hpsvh p {
+    margin: 0 !important;
+    line-height: 23px !important;
+  }
+
+  /* Specific padding for "Talk to us" (.framer-v-18a8r8k) */
+  .framer-Xl5mj.framer-v-18a8r8k,
+  .framer-v-18a8r8k.framer-39xvlj,
+  a[data-framer-name="Simple"] {
+    padding: 10px 24px !important;
+    gap: 12px !important;
+    width: auto !important;
+    min-width: max-content !important;
+  }
+
+  /* Navbar CTA "Get in touch" */
+  .framer-wye0lu a.framer-Xl5mj,
+  .framer-wye0lu .framer-Xl5mj,
+  a[data-framer-name="Line"].framer-Xl5mj {
+    padding: 10px 24px !important;
+    width: auto !important;
+    min-width: max-content !important;
+  }
+
+  /* Hero & Section CTA "Book Consultation" */
+  .framer-1npfag2 a[data-framer-name="Button"],
+  div[data-framer-name="Hero"] a[data-framer-name="Button"],
+  .framer-12plb68 a.framer-Xl5mj,
+  section[data-framer-name="Why us"] a.framer-Xl5mj {
+    padding: 8px 10px 8px 24px !important;
+    gap: 12px !important;
+    width: auto !important;
+    min-width: max-content !important;
+  }
+
+  /* Arrow icon inside simple buttons (like View all services) -> Pure White */
+  .framer-Xl5mj.framer-v-1uc1f7v svg,
+  .framer-v-1uc1f7v .framer-f97dkt svg,
+  a[data-framer-name="Simple arrow"] svg,
+  a[data-framer-name="Simple"] svg {
+    color: #FFFFFF !important;
+    fill: #FFFFFF !important;
+    stroke: #FFFFFF !important;
+    --18mrqx2: #FFFFFF !important;
+  }
+
+  /* Arrow badge in Hero, CTA & Buttons: Light gold rounded badge with crisp white arrow */
+  .framer-f97dkt,
+  div[data-framer-name="arrow"],
+  .framer-12plb68 a.framer-Xl5mj .framer-f97dkt,
+  section[data-framer-name="Why us"] a.framer-Xl5mj .framer-f97dkt,
+  section[data-framer-name="Content Container"] .framer-f97dkt,
+  .framer-1npfag2 a[data-framer-name="Button"] .framer-f97dkt {
+    background-color: #FFBF00 !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+  }
+  .framer-f97dkt svg,
+  .framer-f97dkt svg path,
+  .framer-f97dkt use,
+  div[data-framer-name="arrow"] svg,
+  div[data-framer-name="arrow"] use,
+  .framer-12plb68 a.framer-Xl5mj .framer-f97dkt svg,
+  section[data-framer-name="Why us"] a.framer-Xl5mj .framer-f97dkt svg,
+  section[data-framer-name="Content Container"] .framer-f97dkt svg,
+  .framer-1npfag2 a[data-framer-name="Button"] .framer-f97dkt svg {
+    color: #FFFFFF !important;
+    fill: #FFFFFF !important;
+    stroke: #FFFFFF !important;
+    --18mrqx2: #FFFFFF !important;
+  }
+
+  /* =========================================================================
+     CONTACT PAGE: REACH OUT BOX ALIGNMENT & TYPOGRAPHY
+     ========================================================================= */
+  .framer-14wc3ae {
+    align-items: flex-start !important;
+    text-align: left !important;
+    place-content: flex-start !important;
+  }
+
+  .framer-14wc3ae .framer-16czdg2,
+  .framer-14wc3ae .framer-1c3u5nr,
+  .framer-16czdg2,
+  .framer-1c3u5nr {
+    align-items: flex-start !important;
+    text-align: left !important;
+    width: 100% !important;
+  }
+
+  .framer-14wc3ae h2,
+  .framer-14wc3ae h2 span,
+  .framer-16czdg2 h2,
+  .framer-16czdg2 h2 span,
+  .framer-14wc3ae h2.framer-styles-preset-hcmt7i,
+  .framer-14wc3ae h2.framer-styles-preset-hcmt7i span {
+    color: #081838 !important;
+    --framer-text-color: #081838 !important;
+    text-align: left !important;
+    font-weight: 700 !important;
+    filter: none !important;
+    opacity: 1 !important;
+  }
+
+  .framer-14wc3ae p,
+  .framer-1c3u5nr p,
+  .framer-14wc3ae p.framer-styles-preset-qlsyr3 {
+    color: #4A5878 !important;
+    --framer-text-color: #4A5878 !important;
+    text-align: left !important;
+    opacity: 1 !important;
+  }
+
+  /* Eyebrow tag: Reach out */
+  .framer-9bzoa9-container p.framer-styles-preset-12qamiq,
+  .framer-9bzoa9-container .framer-zvw3p p {
+    color: #8A5A06 !important;
+    --framer-text-color: #8A5A06 !important;
+    font-weight: 600 !important;
+  }
+
+
+  /* =========================================================================
+     OUR APPROACH: High-Contrast Pure White Headline, Crisp Subtext & Gold Tag
+     Fixes dark-on-dark unreadable headline in "A Better Way To Solve Business Challenges"
+     ========================================================================= */
+  section[data-framer-name="Our Approach"],
+  .framer-amq3p3 {
+    background-color: #081838 !important;
+    background: #081838 !important;
+  }
+
+  section[data-framer-name="Our Approach"] h2,
+  section[data-framer-name="Our Approach"] h2 span,
+  section[data-framer-name="Our Approach"] .framer-1grx4cn h2,
+  section[data-framer-name="Our Approach"] .framer-1grx4cn h2 span,
+  section[data-framer-name="Our Approach"] .framer-tn8jyu h2,
+  section[data-framer-name="Our Approach"] .framer-tn8jyu h2 span,
+  .framer-amq3p3 h2,
+  .framer-amq3p3 h2 span,
+  .framer-amq3p3 .framer-1grx4cn h2,
+  .framer-amq3p3 .framer-1grx4cn h2 span,
+  .framer-amq3p3 .framer-tn8jyu h2,
+  .framer-amq3p3 .framer-tn8jyu h2 span {
+    color: #FFFFFF !important;
+    --framer-text-color: #FFFFFF !important;
+    opacity: 1 !important;
+    filter: none !important;
+    font-weight: 700 !important;
+  }
+
+  section[data-framer-name="Our Approach"] .framer-4h1vua p,
+  section[data-framer-name="Our Approach"] .framer-4h1vua *,
+  section[data-framer-name="Our Approach"] .framer-1grx4cn p,
+  section[data-framer-name="Our Approach"] .framer-1grx4cn p *,
+  .framer-amq3p3 .framer-4h1vua p,
+  .framer-amq3p3 .framer-4h1vua *,
+  .framer-amq3p3 .framer-1grx4cn p,
+  .framer-amq3p3 .framer-1grx4cn p * {
+    color: #C7D0E0 !important;
+    --framer-text-color: #C7D0E0 !important;
+    opacity: 1 !important;
+    filter: none !important;
+    font-size: 1.15rem !important;
+    line-height: 1.6 !important;
+  }
+
+  section[data-framer-name="Our Approach"] div[data-framer-name="Tag"] p,
+  section[data-framer-name="Our Approach"] div[data-framer-name="Tag"] span,
+  .framer-amq3p3 div[data-framer-name="Tag"] p,
+  .framer-amq3p3 div[data-framer-name="Tag"] span,
+  .framer-19q0rnq-container p {
+    color: #F0BE55 !important;
+    --framer-text-color: #F0BE55 !important;
+    font-weight: 600 !important;
+  }
+
+  /* =========================================================================
+     REMOVE LOGO TICKER / CLIENT LOGOS MARQUEE (Mercury, Leafe, hues, etc.)
+     ========================================================================= */
+  div[data-framer-name="Logos"],
+  .framer-1ydpvd6,
+  div[data-framer-name="Logo ticker"],
+  .framer-17mlodp,
+  .framer-17mlodp ul,
+  .framer-17mlodp li,
+  div[data-framer-name="Logos"][data-border="true"] {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    min-height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+    border-width: 0 !important;
+    overflow: hidden !important;
+    pointer-events: none !important;
+  }
+
+
+
+
+  /* Solid Deep Navy 900 (#081838) for Hero & Top Navigation backdrop */
+  .framer-1npfag2,
+  div[data-framer-name="Hero"],
+  .framer-HDnou .framer-1npfag2,
+  .framer-kcrqvk .framer-1npfag2,
+  section[data-framer-name="Hero"] {
+    background: #081838 !important;
+    background-color: #081838 !important;
+  }
+
+  /* Ensure navigation bar is transparent and shows the clean Navy 900 background */
+  .framer-1vs21cr-container,
+  .framer-AsZ1t,
+  .framer-wye0lu,
+  div[data-framer-name="Desktop navigation"],
+  div[data-framer-name="Container"] {
+    background: transparent !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+
+  /* Ensure logo emblem and its parent containers have zero background & zero blur */
+  .framer-4yblnf,
+  .framer-2r7npf-container,
+  .framer-UXcol,
+  a.framer-UXcol,
+  .career-nova-nav-logo,
+  img.career-nova-nav-logo {
+    background: transparent !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    filter: none !important;
+    -webkit-filter: none !important;
+  }
+
+  /* Ensure Hero Video is visible and playing smoothly */
+  .framer-1ur3sde-container,
+  .framer-xreo94-container,
+  .framer-xreo94-container video,
+  div[data-framer-name="Video"] video {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    border-radius: 15px !important;
+  }
+
+  /* =========================================================================
+     14. SITE-WIDE CONTENT & NAVIGATION POLICIES
+     - Hide Success Stories / Cases from Navigation until real stories exist
+     - Hide Case Studies link from Footer pages list
+     - Hide placeholder Social accounts until verified accounts exist
+     - Hide "Made by Flux" / external agency attribution in footer
+     - Hide 4.8/5 rating & star SVGs; display clean micro-copy
+     ========================================================================= */
+  /* Hide Success Stories / Cases in Navbar */
+  .framer-13h4gav-container,
+  div[data-framer-name="Cases"],
+  .framer-wye0lu div[name="Cases"] {
+    display: none !important;
+  }
+
+  /* Hide Case Studies in Footer Pages column */
+  .framer-9t7ppv-container {
+    display: none !important;
+  }
+
+  /* Hide placeholder Socials in Footer */
+  .framer-1d57qsi-container,
+  .framer-1l50f3b-container,
+  .framer-5hzdr9-container,
+  .framer-1luitih-container,
+  .framer-s5sp27 {
+    display: none !important;
+  }
+
+  /* Hide Made by Flux / Attribution */
+  .framer-p52zir-container,
+  a[href*="kodencore.com"],
+  a[href*="flux"] {
+    display: none !important;
+  }
+
+  /* Closing CTA Rating cleanup */
+  .framer-as7wo8 .framer-wv5h7g {
+    display: none !important;
+  }
+  .framer-as7wo8 {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  .framer-as7wo8 p {
+    color: #C7D0E0 !important;
+    --framer-text-color: #C7D0E0 !important;
+    font-size: 13px !important;
+  }
+
+/* =========================================================================
+   SECTION 15: HIDE UNTIL REAL (Cases / Success Stories, Testimonials, Stats)
+   ========================================================================= */
+section[data-framer-name="Cases"],
+.framer-1a9v0qf,
+section[data-framer-name="Testimonials"],
+.framer-1f5r9d5,
+.framer-1h6d9r5,
+div[data-framer-name="Numbers"],
+.framer-1m59114-container,
+.framer-b0l2x5-container,
+.framer-1q4w108-container {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0px !important;
+  min-height: 0px !important;
+  padding: 0px !important;
+  margin: 0px !important;
+  overflow: hidden !important;
+}
+
+/* Hide 'Trusted by' 4.8 star badge text so only 'Guiding students across India' shows */
+.framer-1sx8zpn .framer-i04e7l {
+  display: none !important;
+}
+
+/* Ensure clean badge layout */
+.framer-1sx8zpn {
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+/* Hide Stats / Numbers counters */
+.framer-1h6d9r5,
+div[data-framer-name="Numbers"],
+.framer-1m59114-container,
+.framer-b0l2x5-container,
+.framer-1q4w108-container {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0px !important;
+  min-height: 0px !important;
+  padding: 0px !important;
+  margin: 0px !important;
+  overflow: hidden !important;
+}
+
+/* =========================================================================
+   SECTION 16: TICKER SPACING & COLLISION PREVENTION
+   ========================================================================= */
+section[data-framer-name="Ticker"] ul {
+  display: flex !important;
+  align-items: center !important;
+  gap: 50px !important;
+}
+
+section[data-framer-name="Ticker"] ul li {
+  display: inline-flex !important;
+  align-items: center !important;
+  width: auto !important;
+  min-width: max-content !important;
+  flex-shrink: 0 !important;
+}
+
+section[data-framer-name="Ticker"] div[data-framer-name^="Ticker Item"],
+section[data-framer-name="Ticker"] .framer-uYAl8,
+section[data-framer-name="Ticker"] .framer-mfv6wq {
+  display: inline-flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  width: auto !important;
+  min-width: max-content !important;
+  gap: 50px !important;
+  flex-shrink: 0 !important;
+}
+
+section[data-framer-name="Ticker"] .framer-18qtrry {
+  display: inline-block !important;
+  width: auto !important;
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+}
+
+section[data-framer-name="Ticker"] .framer-w0S00 {
+  display: inline-block !important;
+  width: 41px !important;
+  height: 41px !important;
+  margin: 0 !important;
+  flex-shrink: 0 !important;
+}
+
+/* =========================================================================
+   SECTION 17: FOOTER GAP & FAQ BUTTON CLIPPING FIXES
+   ========================================================================= */
+/* Prevent any white gap/strip under footer */
+html, body {
+  background-color: #081838 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+footer,
+section[data-framer-name="Footer"],
+div[data-framer-name="Footer"],
+.framer-1j71d60,
+.framer-p3w9p1,
+.framer-1a9v0qf {
+  background-color: #081838 !important;
+  margin-bottom: 0 !important;
+}
+
+/* Fix FAQ Left Column Button Clipping ("Book Counselling") */
+.framer-w9jscu,
+.framer-HDnou .framer-w9jscu,
+.framer-153k9ca-container,
+.framer-HDnou .framer-153k9ca-container {
+  max-width: none !important;
+  width: auto !important;
+  min-width: max-content !important;
+  overflow: visible !important;
+}
+
+.framer-153k9ca-container a,
+.framer-153k9ca-container .framer-Xl5mj,
+.framer-153k9ca-container .framer-v-18a8r8k {
+  width: auto !important;
+  min-width: max-content !important;
+  padding: 10px 24px !important;
+  overflow: visible !important;
+  white-space: nowrap !important;
+}
+
+/* =========================================================================
+   SECTION 18: COURSES CARD TEXT, CURVE & FOOTER COPYRIGHT CLEANUP
+   ========================================================================= */
+
+/* 1. Courses Section Card Text - Pure White */
+.framer-1cwqa1i,
+.framer-1cwqa1i *,
+.framer-styles-preset-uuzeo9,
+.framer-styles-preset-uuzeo9 *,
+.framer-1fbdihy,
+.framer-1fbdihy *,
+.framer-4Disc .framer-1fbdihy,
+.framer-4Disc .framer-1fbdihy p,
+.framer-4Disc .framer-1fbdihy h2,
+.framer-4Disc .framer-1maj016,
+.framer-4Disc .framer-1maj016 p,
+.framer-4Disc .framer-1cwqa1i,
+.framer-4Disc .framer-1cwqa1i p {
+  color: #FFFFFF !important;
+  --framer-text-color: #FFFFFF !important;
+  --extracted-r6o4lv: #FFFFFF !important;
+  fill: #FFFFFF !important;
+  opacity: 1 !important;
+}
+
+/* 2. Fix Yellow Curve Bleed Behind Card Corners */
+.framer-w1wLW,
+.framer-w1wLW[data-framer-name*="Desktop"],
+.framer-w1wLW[data-framer-name*="Tablet"],
+.framer-w1wLW[data-framer-name*="Phone"],
+.framer-8jh6fz-container .framer-w1wLW,
+.framer-npejc0,
+.framer-gdpr9p-container {
+  background-color: transparent !important;
+  background: transparent !important;
+  border-radius: 24px !important;
+  overflow: hidden !important;
+}
+
+.framer-4Disc,
+.framer-4Disc.framer-9jby88,
+.framer-4Disc [data-framer-background-image-wrapper="true"] {
+  border-radius: 24px !important;
+  overflow: hidden !important;
+}
+
+/* 3. Hide Duplicate Footer Copyright */
+.framer-1pwj5jx,
+div[data-framer-name="Copyright"],
+.framer-1bzcv6h,
+div[data-framer-name="Inner Spacer"],
+.framer-mlcttg,
+div[data-framer-name="Copyright Legal"] {
+  display: none !important;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* =========================================================================
+   SECTION 19: ABOUT PAGE TEAM HIDING & PRICING "TAILORED TO YOU" STYLING
+   ========================================================================= */
+
+/* Hide Team section on About page until real profiles are added */
+section.framer-16kr5v4,
+section[data-framer-name="Team"],
+div[data-framer-name="Team"] {
+  display: none !important;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+}
+
+/* "Tailored to you" text formatting on How We Support You cards */
+.framer-10441lz h2,
+.framer-10441lz .framer-text {
+  font-size: 26px !important;
+  line-height: 1.25 !important;
+  white-space: nowrap !important;
+}
+
+/* Ensure / per month is hidden */
+.framer-1bt846h,
+div[data-framer-name="Price"] .framer-1bt846h {
+  display: none !important;
+}
+
+
+/* =========================================================================
+   SECTION 20: GLOBAL ALL BUTTON TEXT TO PURE WHITE
+   ========================================================================= */
+a[data-framer-name="Button"],
+a[data-framer-name="Button"] *,
+.framer-Xl5mj,
+.framer-Xl5mj *,
+.framer-1473l0o,
+.framer-1473l0o *,
+.framer-yhbd3f,
+.framer-yhbd3f *,
+.framer-v-18a8r8k,
+.framer-v-18a8r8k *,
+.framer-153k9ca-container a,
+.framer-153k9ca-container a *,
+div[data-framer-name="Button"] a,
+div[data-framer-name="Button"] a *,
+div[data-framer-name="Button"] p,
+div[data-framer-name="Button"] span,
+div[data-framer-name="Button"] *,
+button,
+button *,
+form button,
+form button *,
+.framer-button,
+.framer-button *,
+.framer-1shwfl button,
+.framer-1shwfl button *,
+.framer-1fe5dgd button,
+.framer-1fe5dgd button *,
+.framer-1c9xq7x button,
+.framer-1c9xq7x button *,
+.framer-1rrchm8-container button,
+.framer-1rrchm8-container button * {
+  color: #FFFFFF !important;
+  --framer-text-color: #FFFFFF !important;
+  --extracted-r6o4lv: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+  text-shadow: none !important;
+}
+
+/* Arrow inside button */
+.framer-f97dkt svg,
+.framer-f97dkt svg path,
+.framer-f97dkt use {
+  color: #FFFFFF !important;
+  stroke: #FFFFFF !important;
+  fill: #FFFFFF !important;
+  --18mrqx2: #FFFFFF !important;
+}
+
+/* =========================================================================
+   SECTION 21: FAQ CONSULTATION BOX (ABOUT & HOME PAGES)
+   - Removes man's photo
+   - Unclips button width (no right truncation)
+   - Eliminates duplicate vertical text ("Book Counselling" shown once)
+   ========================================================================= */
+
+/* 1. Remove Man's Photo in FAQ Left Box */
+section[data-framer-name="FAQs"] .framer-1jwxezv,
+section[data-framer-name="FAQs"] .framer-g2kcoc,
+section[data-framer-name="FAQs"] div[data-framer-name="Image"] {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  width: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* 2. Unclip FAQ Left Column & Container */
+section[data-framer-name="FAQs"] .framer-1xvvck2,
+section[data-framer-name="FAQs"] .framer-ecqwc4,
+section[data-framer-name="FAQs"] div[data-framer-name="Left"] {
+  overflow: visible !important;
+  max-width: none !important;
+}
+
+section[data-framer-name="FAQs"] .framer-1naimee,
+section[data-framer-name="FAQs"] .framer-w9jscu,
+section[data-framer-name="FAQs"] .framer-igigw6,
+section[data-framer-name="FAQs"] div[data-framer-name="CTA"],
+.framer-1naimee,
+.framer-w9jscu,
+.framer-igigw6 {
+  max-width: none !important;
+  width: auto !important;
+  min-width: max-content !important;
+  overflow: visible !important;
+  align-items: flex-start !important;
+}
+
+section[data-framer-name="FAQs"] .framer-1jil8k,
+section[data-framer-name="FAQs"] .framer-ijxr16 {
+  max-width: 320px !important;
+  width: auto !important;
+  overflow: visible !important;
+}
+
+/* 3. Button Container & Pill Shape */
+section[data-framer-name="FAQs"] .framer-10ewjqd-container,
+section[data-framer-name="FAQs"] .framer-153k9ca-container,
+section[data-framer-name="FAQs"] .framer-1h67jcc-container,
+section[data-framer-name="FAQs"] div[data-framer-name="Button"],
+.framer-10ewjqd-container,
+.framer-153k9ca-container,
+.framer-1h67jcc-container {
+  max-width: none !important;
+  width: auto !important;
+  min-width: max-content !important;
+  overflow: visible !important;
+  display: inline-block !important;
+}
+
+section[data-framer-name="FAQs"] .framer-10ewjqd-container a,
+section[data-framer-name="FAQs"] .framer-153k9ca-container a,
+section[data-framer-name="FAQs"] .framer-1h67jcc-container a,
+section[data-framer-name="FAQs"] div[data-framer-name="Button"] a {
+  width: auto !important;
+  min-width: max-content !important;
+  max-width: none !important;
+  padding: 12px 28px !important;
+  border-radius: 9999px !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-decoration: none !important;
+  box-sizing: border-box !important;
+}
+
+/* 4. Text Container: 23px clipping for authentic vertical roll */
+.framer-17hpsvh {
+  overflow: hidden !important;
+  height: 23px !important;
+  max-height: 23px !important;
+  position: relative !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+section[data-framer-name="FAQs"] .framer-17hpsvh p,
+section[data-framer-name="FAQs"] .framer-17hpsvh span,
+section[data-framer-name="FAQs"] .framer-10ewjqd-container a *,
+section[data-framer-name="FAQs"] .framer-153k9ca-container a *,
+section[data-framer-name="FAQs"] div[data-framer-name="Button"] a * {
+  color: #FFFFFF !important;
+  --framer-text-color: #FFFFFF !important;
+  --extracted-r6o4lv: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+  line-height: 22px !important;
+  margin: 0 !important;
+  white-space: nowrap !important;
+}
+
+
+/* =========================================================================
+   SECTION 22: REMOVE YELLOW HIGHLIGHTS, TINTS & MASKS OVER CARDS (ALL PAGES)
+   ========================================================================= */
+
+/* 1. Reset color tokens */
+:root {
+  --token-c80313c8-a0c1-4f14-ad5e-9b2193d38589: transparent !important;
+  --token-6d152444-b214-4d88-ac2d-36028b1469f8: transparent !important;
+}
+
+/* 2. Remove yellow background tint behind card image containers */
+div[data-framer-name="Top"],
+.framer-gms5h {
+  background-color: transparent !important;
+  background: transparent !important;
+}
+
+/* 3. Remove bottom-fading masks on card images so images stay 100% solid & crisp */
+figure[data-framer-name="Card Image"],
+figure[data-framer-name="Card Image"] *,
+.framer-nzrt1f,
+.framer-nzrt1f * {
+  mask: none !important;
+  -webkit-mask: none !important;
+}
+
+/* 4. Remove overlay gradient / blur masks over cards */
+div[data-framer-name="Mask"],
+.framer-yvd70,
+.framer-1a7jr6t,
+.framer-8643tc {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  background: none !important;
+}
+
+/* 5. Remove yellow gradient flare in CTA section card */
+div[data-framer-name="Gradient"],
+.framer-u5sl9s {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  background: none !important;
+}
+
+/* 6. Card titles and headings: Pure White (#FFFFFF) across all dark cards (Values, Why Us, Hero, How It Works) */
+.framer-styles-preset-hpamux,
+.framer-styles-preset-hpamux:not(.rich-text-wrapper),
+.framer-styles-preset-hpamux *,
+.framer-styles-preset-4trj8p,
+.framer-styles-preset-4trj8p *,
+div[data-framer-name="Text wrapper"] h4,
+div[data-framer-name="Text wrapper"] h4 *,
+div[data-framer-name="Why us"] h4,
+div[data-framer-name="Why us"] h4 *,
+section[data-framer-name="Why us"] h4,
+section[data-framer-name="Why us"] h4 *,
+div[data-framer-name="Values"] h4,
+div[data-framer-name="Values"] h4 *,
+section[data-framer-name="Values"] h4,
+section[data-framer-name="Values"] h4 *,
+div[data-framer-name="Hero"] h4,
+div[data-framer-name="Hero"] h4 *,
+div[data-framer-name="Pricing Cards"] h4,
+div[data-framer-name="Pricing Cards"] h4 *,
+div[data-framer-name="Cards"] h4,
+div[data-framer-name="Cards"] h4 *,
+section[data-framer-name="Content Container"] h4,
+section[data-framer-name="Content Container"] h4 * {
+  color: #FFFFFF !important;
+  --framer-text-color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+}
+
+/* ONLY for light cream cards on Services page (/subpages/services.html): dark charcoal text */
+.framer-1ryp9vo h4,
+.framer-1ryp9vo .framer-styles-preset-hpamux,
+.framer-1c4egn7 h4,
+.framer-1c4egn7 .framer-styles-preset-hpamux {
+  color: #0C0E12 !important;
+  --framer-text-color: #0C0E12 !important;
+  -webkit-text-fill-color: #0C0E12 !important;
+}
+
+/* 7. Button layout & clipping fixes (FAQ & CTA buttons) */
+.framer-1naimee,
+.framer-q8XjE .framer-1naimee,
+div[data-framer-name="CTA"].framer-1naimee {
+  max-width: none !important;
+  width: auto !important;
+  overflow: visible !important;
+}
+
+.framer-10ewjqd-container,
+.framer-153k9ca-container,
+.framer-1h67jcc-container,
+.framer-1hawk0x-container,
+.framer-10ewjqd-container a,
+.framer-153k9ca-container a,
+.framer-1h67jcc-container a,
+.framer-1hawk0x-container a {
+  width: auto !important;
+  min-width: max-content !important;
+  max-width: none !important;
+  overflow: visible !important;
+  white-space: nowrap !important;
+}
+
+/* =========================================================================
+   SECTION 23: AUTHENTIC FRAMER BUTTON HOVER ANIMATION (ROLLOVER & ARROW LEAP)
+   - Matches the original main website button animation 1:1
+   - Text roll: Top text rolls up and out while duplicate text rolls in from below
+   - Arrow leap: Arrow 1 shoots diagonally up-right, Arrow 2 enters from bottom-left
+   - Pure brand gold styling, zero glow, zero black backgrounds
+   ========================================================================= */
+
+/* 1. Global CTA & Primary Buttons: Clean Gold Pill */
+a.framer-Xl5mj.framer-39xvlj,
+a[data-framer-name="Primary"],
+a[name="Button"],
+div[data-framer-name="Hero"] a[data-framer-name="Button"],
+.framer-1npfag2 a[data-framer-name="Button"] {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 16px !important;
+  padding: 6px 6px 6px 24px !important;
+  border-radius: 9999px !important;
+  background: #D9A53A !important;
+  background-color: #D9A53A !important;
+  box-shadow: none !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  overflow: hidden !important;
+  border: none !important;
+  transition: background 0.25s ease !important;
+}
+
+/* Button Hover: Subtle highlight, NO glow */
+a.framer-Xl5mj.framer-39xvlj:hover,
+a[data-framer-name="Primary"]:hover,
+a[name="Button"]:hover,
+div[data-framer-name="Hero"] a[data-framer-name="Button"]:hover,
+.framer-1npfag2 a[data-framer-name="Button"]:hover {
+  background: #F0BE55 !important;
+  background-color: #F0BE55 !important;
+  box-shadow: none !important;
+}
+
+/* 2. Authentic Framer Text Rollover Animation */
+.framer-Xl5mj .framer-17hpsvh,
+a[name="Button"] .framer-17hpsvh,
+div[data-framer-name="Hero"] a[data-framer-name="Button"] .framer-17hpsvh {
+  display: flex !important;
+  flex-direction: column !important;
+  height: 23px !important;
+  max-height: 23px !important;
+  overflow: hidden !important;
+  position: relative !important;
+}
+
+.framer-Xl5mj .framer-17hpsvh .framer-n434ag,
+.framer-Xl5mj .framer-17hpsvh .framer-g7muo8,
+a[name="Button"] .framer-17hpsvh .framer-n434ag,
+a[name="Button"] .framer-17hpsvh .framer-g7muo8 {
+  display: flex !important;
+  align-items: center !important;
+  height: 23px !important;
+  line-height: 23px !important;
+  position: relative !important;
+  white-space: nowrap !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  transform: translateY(0);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.framer-Xl5mj .framer-17hpsvh p,
+a[name="Button"] .framer-17hpsvh p {
+  color: #FFFFFF !important;
+  font-weight: 700 !important;
+  font-size: 15px !important;
+  letter-spacing: -0.01em !important;
+  text-shadow: none !important;
+  margin: 0 !important;
+  line-height: 23px !important;
+  white-space: nowrap !important;
+}
+
+/* On Button Hover: Top text rolls up, bottom text rolls into place */
+a.framer-Xl5mj:hover .framer-17hpsvh .framer-n434ag,
+a.framer-Xl5mj:hover .framer-17hpsvh .framer-g7muo8,
+a[data-framer-name="Primary"]:hover .framer-17hpsvh .framer-n434ag,
+a[data-framer-name="Primary"]:hover .framer-17hpsvh .framer-g7muo8,
+a[name="Button"]:hover .framer-17hpsvh .framer-n434ag,
+a[name="Button"]:hover .framer-17hpsvh .framer-g7muo8,
+div[data-framer-name="Hero"] a[data-framer-name="Button"]:hover .framer-17hpsvh .framer-n434ag,
+div[data-framer-name="Hero"] a[data-framer-name="Button"]:hover .framer-17hpsvh .framer-g7muo8,
+.framer-1npfag2 a[data-framer-name="Button"]:hover .framer-17hpsvh .framer-n434ag,
+.framer-1npfag2 a[data-framer-name="Button"]:hover .framer-17hpsvh .framer-g7muo8 {
+  transform: translateY(-23px) !important;
+}
+
+/* 3. The Arrow Badge: Authentic Gold circular badge */
+.framer-f97dkt,
+div[data-framer-name="arrow"],
+a.framer-Xl5mj .framer-f97dkt,
+a[name="Button"] .framer-f97dkt,
+div[data-framer-name="Hero"] a[data-framer-name="Button"] .framer-f97dkt {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 28px !important;
+  height: 28px !important;
+  min-width: 28px !important;
+  min-height: 28px !important;
+  border-radius: 50% !important;
+  background-color: #FFBF00 !important;
+  background: #FFBF00 !important;
+  border: none !important;
+  box-shadow: none !important;
+  position: relative !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  margin: 0 0 0 4px !important;
+  transition: background-color 0.25s ease !important;
+}
+
+/* Arrow 1: Centered at resting state */
+.framer-f97dkt svg.framer-164vrxp,
+.framer-f97dkt svg:first-child,
+div[data-framer-name="arrow"] svg:first-child {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  width: 14px !important;
+  height: 14px !important;
+  color: #FFFFFF !important;
+  stroke: #FFFFFF !important;
+  fill: none !important;
+  --18mrqx2: #FFFFFF !important;
+  stroke-width: 2px !important;
+  transform: translate(-50%, -50%) !important;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+/* Arrow 2: Hidden at bottom-left outside clipping container */
+.framer-f97dkt svg.framer-1ajydfw,
+.framer-f97dkt svg:nth-child(2),
+div[data-framer-name="arrow"] svg:nth-child(2) {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  width: 14px !important;
+  height: 14px !important;
+  color: #FFFFFF !important;
+  stroke: #FFFFFF !important;
+  fill: none !important;
+  --18mrqx2: #FFFFFF !important;
+  stroke-width: 2px !important;
+  transform: translate(-180%, 80%) !important;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+/* ON HOVER: Authentic Framer Arrow Leap! */
+/* Arrow 1 shoots diagonally up-right */
+a.framer-Xl5mj:hover .framer-f97dkt svg.framer-164vrxp,
+a.framer-Xl5mj:hover .framer-f97dkt svg:first-child,
+a[data-framer-name="Primary"]:hover .framer-f97dkt svg:first-child,
+a[name="Button"]:hover .framer-f97dkt svg:first-child,
+div[data-framer-name="Hero"] a[data-framer-name="Button"]:hover .framer-f97dkt svg:first-child,
+.framer-1npfag2 a[data-framer-name="Button"]:hover .framer-f97dkt svg:first-child {
+  transform: translate(80%, -180%) !important;
+}
+
+/* Arrow 2 glides in from bottom-left to center */
+a.framer-Xl5mj:hover .framer-f97dkt svg.framer-1ajydfw,
+a.framer-Xl5mj:hover .framer-f97dkt svg:nth-child(2),
+a[data-framer-name="Primary"]:hover .framer-f97dkt svg:nth-child(2),
+a[name="Button"]:hover .framer-f97dkt svg:nth-child(2),
+div[data-framer-name="Hero"] a[data-framer-name="Button"]:hover .framer-f97dkt svg:nth-child(2),
+.framer-1npfag2 a[data-framer-name="Button"]:hover .framer-f97dkt svg:nth-child(2) {
+  transform: translate(-50%, -50%) !important;
+}

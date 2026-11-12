@@ -3,15 +3,15 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "rewrites": [
-    { "source": "/services/:slug", "destination": "/subpages/services_:slug.html" },
-    { "source": "/blogs/:slug", "destination": "/subpages/blogs_:slug.html" },
-    { "source": "/case-studies/:slug", "destination": "/subpages/case-studies_:slug.html" },
-    { "source": "/about", "destination": "/subpages/about.html" },
-    { "source": "/services", "destination": "/subpages/services.html" },
-    { "source": "/contact", "destination": "/subpages/contact.html" },
-    { "source": "/how-it-works", "destination": "/subpages/how-it-works.html" },
-    { "source": "/pricing", "destination": "/subpages/pricing.html" },
-    { "source": "/blogs", "destination": "/subpages/blogs.html" },
-    { "source": "/case-studies", "destination": "/subpages/case-studies.html" }
+    { "source": "/services", "destination": "/services.html" },
+    { "source": "/about", "destination": "/about.html" },
+    { "source": "/contact", "destination": "/contact.html" },
+    { "source": "/how-it-works", "destination": "/how-it-works.html" },
+    { "source": "/pricing", "destination": "/pricing.html" },
+    { "source": "/blogs", "destination": "/blogs.html" },
+    { "source": "/case-studies", "destination": "/case-studies.html" },
+    { "source": "/services/:slug", "destination": "/services/:slug.html" },
+    { "source": "/blogs/:slug", "destination": "/blogs/:slug.html" },
+    { "source": "/case-studies/:slug", "destination": "/case-studies/:slug.html" }
   ]
 }
