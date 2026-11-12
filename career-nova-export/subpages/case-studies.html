@@ -3253,15 +3253,13 @@ div[data-framer-name="arrow"] {
 
 
 /* =========================================================================
-   SECTION 23: PREMIUM BUTTON HOVER ANIMATION & ARROW BADGE FIX
-   - Fixes the empty yellow dot bug on the right side of the CTA button
-   - Gives the arrow badge a high-contrast, polished Deep Navy appearance
-   - Makes the SVG arrow 100% visible, centered, and crisp
-   - Implements ultra-smooth 45-degree forward diagonal leap animation on hover
-   - Keeps button text pure white and rock-solid without clipping or rollover glitch
+   SECTION 23: BUTTON ARROW ANIMATION FIX (CLEAN BRAND GOLD, ZERO GLOW, ZERO BLACK)
+   - Restores original clean button & gold badge styling (NO black background, NO glow)
+   - Fixes the missing arrow icon inside the yellow circular badge
+   - Smooth diagonal hover glide animation for the arrow
    ========================================================================= */
 
-/* 1. Global CTA & Primary Buttons: Perfect Golden Pill shape */
+/* 1. Global CTA & Primary Buttons: Clean Gold Pill */
 a.framer-Xl5mj.framer-39xvlj,
 a[data-framer-name="Primary"],
 a[name="Button"],
@@ -3273,23 +3271,26 @@ div[data-framer-name="Hero"] a[data-framer-name="Button"],
   gap: 12px !important;
   padding: 8px 10px 8px 24px !important;
   border-radius: 9999px !important;
-  background: linear-gradient(135deg, #F0B738 0%, #D8981A 100%) !important;
-  box-shadow: 0 4px 14px rgba(216, 152, 26, 0.32), inset 0 1px 0 rgba(255, 255, 255, 0.25) !important;
+  background: #D9A53A !important;
+  background-color: #D9A53A !important;
+  box-shadow: none !important;
   text-decoration: none !important;
   cursor: pointer !important;
   overflow: visible !important;
-  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s ease, background 0.28s ease !important;
+  border: none !important;
+  transition: transform 0.2s ease, background 0.2s ease !important;
 }
 
-/* 2. Button Hover Lift & Glow */
+/* 2. Button Hover: Subtle lift, clean gold highlight, NO GLOW */
 a.framer-Xl5mj.framer-39xvlj:hover,
 a[data-framer-name="Primary"]:hover,
 a[name="Button"]:hover,
 div[data-framer-name="Hero"] a[data-framer-name="Button"]:hover,
 .framer-1npfag2 a[data-framer-name="Button"]:hover {
-  transform: translateY(-2px) scale(1.02) !important;
-  box-shadow: 0 8px 25px rgba(216, 152, 26, 0.48), 0 0 16px rgba(240, 183, 56, 0.35) !important;
-  background: linear-gradient(135deg, #F5BF45 0%, #E0A222 100%) !important;
+  transform: translateY(-1px) !important;
+  box-shadow: none !important;
+  background: #F0BE55 !important;
+  background-color: #F0BE55 !important;
 }
 
 /* 3. Text Stability: Single crisp line of pure white text */
@@ -3319,7 +3320,7 @@ a[name="Button"] .framer-17hpsvh p {
   font-weight: 700 !important;
   font-size: 15px !important;
   letter-spacing: -0.01em !important;
-  text-shadow: 0 1px 2px rgba(8, 24, 56, 0.3) !important;
+  text-shadow: none !important;
   margin: 0 !important;
   line-height: normal !important;
   white-space: nowrap !important;
@@ -3334,7 +3335,7 @@ a[name="Button"] .framer-17hpsvh p {
   height: 0 !important;
 }
 
-/* 4. The Arrow Circular Badge: Crisp Deep Navy circle with high contrast */
+/* 4. The Arrow Circular Badge: Original Yellow/Gold circular badge matching button, NO BLACK, NO BORDER */
 .framer-f97dkt,
 div[data-framer-name="arrow"],
 a.framer-Xl5mj .framer-f97dkt,
@@ -3343,22 +3344,23 @@ div[data-framer-name="Hero"] a[data-framer-name="Button"] .framer-f97dkt {
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  width: 30px !important;
-  height: 30px !important;
-  min-width: 30px !important;
-  min-height: 30px !important;
+  width: 28px !important;
+  height: 28px !important;
+  min-width: 28px !important;
+  min-height: 28px !important;
   border-radius: 50% !important;
-  background-color: #081838 !important; /* Premium Deep Navy contrast against Gold */
-  border: 1.5px solid rgba(255, 255, 255, 0.25) !important;
-  box-shadow: 0 2px 6px rgba(8, 24, 56, 0.25) !important;
+  background-color: #FFBF00 !important;
+  background: #FFBF00 !important;
+  border: none !important;
+  box-shadow: none !important;
   position: relative !important;
   overflow: hidden !important;
   padding: 0 !important;
   margin: 0 0 0 4px !important;
-  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.28s ease, border-color 0.28s ease !important;
+  transition: transform 0.25s ease !important;
 }
 
-/* 5. The Arrow SVG Icon: Perfectly centered, crisp white/gold arrow */
+/* 5. The Arrow SVG Icon: Centered, crisp white arrow */
 .framer-f97dkt svg.framer-164vrxp,
 .framer-f97dkt svg:first-child,
 div[data-framer-name="arrow"] svg:first-child {
@@ -3377,7 +3379,9 @@ div[data-framer-name="arrow"] svg:first-child {
   stroke: #FFFFFF !important;
   fill: none !important;
   --18mrqx2: #FFFFFF !important;
-  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), stroke 0.28s ease, color 0.28s ease !important;
+  stroke-width: 2px !important;
+  transform: translate(0, 0) !important;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 
 /* Hide duplicate fallback SVG so it never leaks or collides */
@@ -3390,15 +3394,16 @@ div[data-framer-name="arrow"] svg:nth-child(2) {
   height: 0 !important;
 }
 
-/* 6. Arrow Badge Hover Animation: Smooth scale & 45-degree diagonal dart */
+/* 6. Arrow Animation on Button Hover: Smooth diagonal leap, NO BLACK BACKGROUND */
 a.framer-Xl5mj:hover .framer-f97dkt,
 a[data-framer-name="Primary"]:hover .framer-f97dkt,
 a[name="Button"]:hover .framer-f97dkt,
 div[data-framer-name="Hero"] a[data-framer-name="Button"]:hover .framer-f97dkt,
 .framer-1npfag2 a[data-framer-name="Button"]:hover .framer-f97dkt {
-  background-color: #040D1F !important;
-  border-color: rgba(255, 255, 255, 0.6) !important;
-  transform: scale(1.08) !important;
+  background-color: #FFBF00 !important;
+  background: #FFBF00 !important;
+  border: none !important;
+  box-shadow: none !important;
 }
 
 a.framer-Xl5mj:hover .framer-f97dkt svg.framer-164vrxp,
@@ -3407,10 +3412,10 @@ a[data-framer-name="Primary"]:hover .framer-f97dkt svg:first-child,
 a[name="Button"]:hover .framer-f97dkt svg:first-child,
 div[data-framer-name="Hero"] a[data-framer-name="Button"]:hover .framer-f97dkt svg:first-child,
 .framer-1npfag2 a[data-framer-name="Button"]:hover .framer-f97dkt svg:first-child {
-  transform: translate(2.5px, -2.5px) !important;
-  color: #F0B738 !important;
-  stroke: #F0B738 !important;
-  --18mrqx2: #F0B738 !important;
+  transform: translate(3px, -3px) !important;
+  color: #FFFFFF !important;
+  stroke: #FFFFFF !important;
+  --18mrqx2: #FFFFFF !important;
 }
 
 
